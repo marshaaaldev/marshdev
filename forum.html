@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Forum - MarshDev</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-zinc-900 text-zinc-100 text-sm font-sans">
+  <!-- Header -->
+  <header class="p-4 border-b border-zinc-800 bg-zinc-950">
+    <div class="flex justify-center items-center gap-2 mb-2">
+      <img src="https://cdn-icons-png.flaticon.com/512/3064/3064197.png" alt="MarshDev Logo" class="w-6 h-6" />
+      <h1 class="text-xl font-bold">MarshDev Forum</h1>
+    </div>
+    <nav class="flex justify-center gap-3 text-sm">
+      <a href="index.html" class="text-indigo-400 px-3 py-1 rounded hover:bg-indigo-600/20 transition">Home</a>
+      <a href="forum.html" class="text-indigo-400 px-3 py-1 rounded bg-indigo-600/30 font-semibold">Forum</a>
+      <a href="dashboard.html" class="text-indigo-400 px-3 py-1 rounded hover:bg-indigo-600/20 transition">Dashboard</a>
+    </nav>
+  </header>
+
+  <!-- Nama Input -->
+  <main class="p-4 max-w-xl mx-auto">
+    <div id="nameSection" class="mb-4">
+      <label for="username" class="block mb-1 text-zinc-300 text-sm">Masukkan Nama Kamu:</label>
+      <input id="username" type="text" class="w-full p-2 rounded bg-zinc-800 border border-zinc-700 text-zinc-100 focus:outline-none" placeholder="Contoh: MarshaaalDev" />
+      <button onclick="setName()" class="mt-2 bg-indigo-600 hover:bg-indigo-700 px-4 py-2 text-white rounded">Masuk Forum</button>
+    </div>
+
+    <!-- Chat Section -->
+    <section id="chatSection" class="hidden">
+      <div id="chatBox" class="h-64 overflow-y-auto border border-zinc-700 bg-zinc-800 p-3 rounded space-y-2 mb-4">
+        <!-- Pesan akan muncul di sini -->
+      </div>
+      <div class="flex gap-2">
+        <input id="message" type="text" placeholder="Tulis pesan..." class="flex-1 p-2 rounded bg-zinc-800 border border-zinc-700 text-zinc-100 focus:outline-none" />
+        <button onclick="sendMessage()" class="bg-green-600 hover:bg-green-700 px-4 py-2 rounded text-white">Kirim</button>
+      </div>
+    </section>
+  </main>
+
+  <!-- Script -->
+  <script>
+    let username = "";
+    let chat = [];
+
+    function setName() {
+      const nameInput = document.getElementById("username");
+      if (nameInput.value.trim() !== "") {
+        username = nameInput.value.trim();
+        document.getElementById("nameSection").classList.add("hidden");
+        document.getElementById("chatSection").classList.remove("hidden");
+        loadChat();
+      }
+    }
+
+    function sendMessage() {
+      const msgInput = document.getElementById("message");
+      const msg = msgInput.value.trim();
+      if (msg !== "") {
+        const newMsg = { name: username, message: msg };
+        chat.push(newMsg);
+        localStorage.setItem("marshdevChat", JSON.stringify(chat));
+        msgInput.value = "";
+        renderChat();
+      }
+    }
+
+    function loadChat() {
+      const saved = localStorage.getItem("marshdevChat");
+      if (saved) chat = JSON.parse(saved);
+      renderChat();
+    }
+
+    function renderChat() {
+      const box = document.getElementById("chatBox");
+      box.innerHTML = "";
+      chat.forEach(item => {
+        const msg = document.createElement("div");
+        msg.innerHTML = `<span class="text-indigo-400 font-semibold">${item.name}</span>: ${item.message}`;
+        box.appendChild(msg);
+      });
+      box.scrollTop = box.scrollHeight;
+    }
+  </script>
+</body>
+</html>
