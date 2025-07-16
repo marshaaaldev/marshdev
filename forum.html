@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Forum - MarshDev</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-zinc-900 text-zinc-100 text-sm font-sans">
+  <!-- Header -->
+  <header class="p-4 border-b border-zinc-800 bg-zinc-950">
+    <div class="flex justify-center items-center gap-2 mb-2">
+      <img src="https://cdn-icons-png.flaticon.com/512/3064/3064197.png" alt="MarshDev Logo" class="w-6 h-6" />
+      <h1 class="text-xl font-bold">MarshDev Forum</h1>
+    </div>
+    <nav class="flex justify-center gap-3 text-sm">
+      <a href="index.html" class="text-indigo-400 px-3 py-1 rounded hover:bg-indigo-600/20 transition">Home</a>
+      <a href="forum.html" class="text-indigo-400 px-3 py-1 rounded bg-indigo-600/30 font-semibold">Forum</a>
+      <a href="dashboard.html" class="text-indigo-400 px-3 py-1 rounded hover:bg-indigo-600/20 transition">Dashboard</a>
+    </nav>
+  </header>
+
+  <!-- Main -->
+  <main class="p-4 max-w-6xl mx-auto">
+    <!-- Username Input -->
+    <div id="nameSection" class="mb-6">
+      <label for="username" class="block mb-1 text-zinc-300 text-sm">Masukkan Nama Kamu:</label>
+      <input id="username" type="text" class="w-full p-2 rounded bg-zinc-800 border border-zinc-700 text-zinc-100 focus:outline-none" placeholder="Contoh: MarshaaalDev" />
+      <button onclick="setName()" class="mt-2 bg-indigo-600 hover:bg-indigo-700 px-4 py-2 text-white rounded">Masuk Forum</button>
+    </div>
+
+    <!-- Chat Layout -->
+    <section id="chatSection" class="hidden grid grid-cols-1 md:grid-cols-4 gap-4">
+      <!-- User Online -->
+      <aside class="bg-zinc-800 border border-zinc-700 rounded p-3 md:col-span-1">
+        <h2 class="font-semibold text-sm mb-2 text-indigo-300">👥 User Online</h2>
+        <ul id="userList" class="space-y-1 text-zinc-300 text-sm"></ul>
+      </aside>
+
+      <!-- Chat Area -->
+      <div class="bg-zinc-800 border border-zinc-700 rounded p-3 flex flex-col md:col-span-3">
+        <h2 class="font-semibold text-sm mb-2 text-indigo-300">💬 Chat / Tanya</h2>
+        <div id="chatBox" class="flex-1 h-64 overflow-y-auto space-y-3 pr-1 border-t border-zinc-700 pt-2 mb-3">
+          <!-- Pesan tampil disini -->
+        </div>
+        <div class="flex gap-2">
+          <input id="message" type="text" placeholder="Tulis pertanyaan atau chat..." class="flex-1 p-2 rounded bg-zinc-700 border border-zinc-600 text-zinc-100 focus:outline-none" />
+          <button onclick="sendMessage()" class="bg-green-600 hover:bg-green-700 px-4 py-2 rounded text-white">Kirim</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Script -->
+  <script>
+    let username = "";
+    let chat = [];
+
+    function setName() {
+      const input = document.getElementById("username");
+      const name = input.value.trim();
+      if (name !== "") {
+        username = name;
+        document.getElementById("nameSection").classList.add("hidden");
+        document.getElementById("chatSection").classList.remove("hidden");
+
+        // Simpan user ke localStorage
+        const users = JSON.parse(localStorage.getItem("marshdevUsers") || "[]");
+        if (!users.includes(username)) {
+          users.push(username);
+          localStorage.setItem("marshdevUsers", JSON.stringify(users));
+        }
+
+        loadChat();
+        loadUsers();
+      }
+    }
+
+    function sendMessage() {
+      const msgInput = document.getElementById("message");
+      const msg = msgInput.value.trim();
+      if (msg !== "") {
+        const newMsg = { name: username, message: msg, time: new Date().toLocaleTimeString() };
+        chat.push(newMsg);
+        localStorage.setItem("marshdevChat", JSON.stringify(chat));
+        msgInput.value = "";
+        renderChat();
+      }
+    }
+
+    function loadChat() {
+      const saved = localStorage.getItem("marshdevChat");
+      if (saved) chat = JSON.parse(saved);
+      renderChat();
+    }
+
+    function renderChat() {
+      const box = document.getElementById("chatBox");
+      box.innerHTML = "";
+      chat.forEach(item => {
+        const div = document.createElement("div");
+        div.className = "border-b border-zinc-700 pb-2";
+        div.innerHTML = `
+          <div><span class="text-indigo-400 font-semibold">${item.name}</span> <span class="text-zinc-400 text-xs">[${item.time}]</span></div>
+          <div class="text-zinc-100">${item.message}</div>
+        `;
+        box.appendChild(div);
+      });
+      box.scrollTop = box.scrollHeight;
+    }
+
+    function loadUsers() {
+      const userList = document.getElementById("userList");
+      const users = JSON.parse(localStorage.getItem("marshdevUsers") || "[]");
+      userList.innerHTML = "";
+      users.forEach(u => {
+        const li = document.createElement("li");
+        li.textContent = "• " + u;
+        userList.appendChild(li);
+      });
+    }
+  </script>
+</body>
+</html>
