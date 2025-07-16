@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form Pemesanan | MarshDev</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-zinc-900 text-white font-sans">
+  <header class="p-4 bg-zinc-800 border-b border-zinc-700 text-center">
+    <h1 class="text-2xl font-bold">📩 Form Pemesanan Project</h1>
+    <nav class="mt-2 space-x-4 text-blue-400">
+      <a href="index.html">Home</a>
+      <a href="dashboard.html">Dashboard</a>
+      <a href="preview.html">Preview GM</a>
+    </nav>
+  </header>
+
+  <main class="p-6 max-w-xl mx-auto">
+    <p class="mb-4 text-center text-sm text-gray-300">Isi form berikut untuk memesan jasa developer. Tim kami akan menghubungi kamu lewat Discord secepatnya.</p>
+
+    <form class="bg-zinc-800 p-6 rounded-lg shadow-lg space-y-4" action="https://formsubmit.co/your-email@example.com" method="POST">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_template" value="table">
+
+      <div>
+        <label class="block text-sm mb-1">Nama Lengkap</label>
+        <input type="text" name="nama" required class="w-full p-2 rounded bg-zinc-700 border border-zinc-600 text-white" />
+      </div>
+
+      <div>
+        <label class="block text-sm mb-1">Jenis Project</label>
+        <select name="jenis" required class="w-full p-2 rounded bg-zinc-700 border border-zinc-600 text-white">
+          <option value="SAMP Gamemode">SAMP Gamemode</option>
+          <option value="Mapping">Mapping</option>
+          <option value="Web UI/UX">Web UI/UX</option>
+          <option value="Full Website">Full Website</option>
+        </select>
+      </div>
+
+      <div>
+        <label class="block text-sm mb-1">Deskripsi Singkat</label>
+        <textarea name="deskripsi" rows="4" required class="w-full p-2 rounded bg-zinc-700 border border-zinc-600 text-white"></textarea>
+      </div>
+
+      <div>
+        <label class="block text-sm mb-1">Discord ID / Kontak</label>
+        <input type="text" name="kontak" required placeholder="Contoh: user#1234" class="w-full p-2 rounded bg-zinc-700 border border-zinc-600 text-white" />
+      </div>
+
+      <button type="submit" class="w-full bg-blue-500 hover:bg-blue-600 transition p-2 rounded font-semibold text-white">Kirim Pemesanan 🚀</button>
+    </form>
+  </main>
+
+  <footer class="mt-10 text-center text-xs text-gray-400">
+    &copy; 2025 MarshDev. Build with ❤️ in Indonesia.
+  </footer>
+</body>
+</html>
