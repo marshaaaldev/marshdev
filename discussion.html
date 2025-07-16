@@ -28,31 +28,25 @@
       <button onclick="setName()" class="mt-2 bg-indigo-600 hover:bg-indigo-700 px-4 py-2 rounded text-white">Masuk Channel</button>
     </div>
 
-    <!-- Layout -->
-    <div id="chatLayout" class="hidden grid grid-cols-1 md:grid-cols-4 gap-4">
-      <!-- Sidebar User -->
-      <aside class="md:col-span-1 bg-zinc-800 rounded p-3 border border-zinc-700">
-        <h2 class="text-indigo-300 font-semibold mb-2">👥 Online</h2>
-        <ul id="userList" class="space-y-2 text-sm text-zinc-300"></ul>
-      </aside>
-
-      <!-- Chat Area -->
-      <section class="md:col-span-3 flex flex-col bg-zinc-800 rounded border border-zinc-700 h-[500px]">
-        <div class="p-3 border-b border-zinc-700 text-indigo-400 font-semibold text-sm">📢 Diskusi Publik</div>
-        <div id="chatBox" class="flex-1 p-4 overflow-y-auto space-y-3">
-          <!-- Chat akan muncul disini -->
-        </div>
-        <div class="border-t border-zinc-700 p-3">
-          <input id="message" type="text" placeholder="Tulis pesan dan tekan Enter..." class="w-full p-2 rounded bg-zinc-700 border border-zinc-600 text-zinc-100" onkeydown="handleEnter(event)" />
-        </div>
-      </section>
-    </div>
+    <!-- Chat Layout -->
+    <section id="chatLayout" class="hidden bg-zinc-800 rounded border border-zinc-700 h-[500px] flex flex-col">
+      <div class="p-3 border-b border-zinc-700 text-indigo-400 font-semibold text-sm">📢 Diskusi Publik (Realtime)</div>
+      <div id="chatBox" class="flex-1 p-4 overflow-y-auto space-y-3"></div>
+      <div class="border-t border-zinc-700 p-3">
+        <input id="message" type="text" placeholder="Tulis pesan dan tekan Enter..." class="w-full p-2 rounded bg-zinc-700 border border-zinc-600 text-zinc-100" onkeydown="handleEnter(event)" />
+      </div>
+    </section>
   </main>
 
   <!-- Script -->
-  <script>
+  <script type="module">
+    const supabaseUrl = "https://egawvajdbuxobbatzigt.supabase.co";
+    const supabaseKey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImVnYXd2YWpkYnV4b2JiYXR6aWd0Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTI1OTY5NTYsImV4cCI6MjA2ODE3Mjk1Nn0.UHSmEf4iOuJ7TRCIUj6eICS90L8fkqHq10GhUXzVcqo";
+    const { createClient } = await import("https://esm.sh/@supabase/supabase-js@2");
+
+    const supabase = createClient(supabaseUrl, supabaseKey);
+
     let username = "";
-    let chat = [];
 
     function setName() {
       const input = document.getElementById("username");
@@ -61,68 +55,38 @@
         username = name;
         document.getElementById("nameSection").classList.add("hidden");
         document.getElementById("chatLayout").classList.remove("hidden");
-
-        const users = JSON.parse(localStorage.getItem("marshDiscussionUsers") || "[]");
-        if (!users.includes(username)) {
-          users.push(username);
-          localStorage.setItem("marshDiscussionUsers", JSON.stringify(users));
-        }
-
         loadChat();
-        loadUsers();
+        setInterval(loadChat, 2000); // refresh tiap 2 detik
       }
     }
 
-    function handleEnter(e) {
-      if (e.key === "Enter") sendMessage();
-    }
-
-    function sendMessage() {
-      const msgInput = document.getElementById("message");
-      const msg = msgInput.value.trim();
-      if (msg !== "") {
-        const newMsg = {
-          name: username,
-          message: msg,
-          time: new Date().toLocaleTimeString()
-        };
-        chat.push(newMsg);
-        localStorage.setItem("marshDiscussionChat", JSON.stringify(chat));
-        msgInput.value = "";
-        renderChat();
+    async function handleEnter(e) {
+      if (e.key === "Enter") {
+        const msgInput = document.getElementById("message");
+        const message = msgInput.value.trim();
+        if (message !== "") {
+          await supabase.from("chat").insert([{ name: username, message }]);
+          msgInput.value = "";
+        }
       }
     }
 
-    function loadChat() {
-      const saved = localStorage.getItem("marshDiscussionChat");
-      if (saved) chat = JSON.parse(saved);
-      renderChat();
-    }
-
-    function renderChat() {
+    async function loadChat() {
+      const { data, error } = await supabase.from("chat").select("*").order("created_at", { ascending: true }).limit(100);
       const box = document.getElementById("chatBox");
       box.innerHTML = "";
-      chat.forEach(item => {
+
+      data.forEach(item => {
         const bubble = document.createElement("div");
         bubble.className = "bg-zinc-700 p-3 rounded-xl w-fit max-w-[75%]";
         bubble.innerHTML = `
-          <div class="text-xs text-zinc-400 mb-1">${item.name} • ${item.time}</div>
+          <div class="text-xs text-zinc-400 mb-1">${item.name} • ${new Date(item.created_at).toLocaleTimeString()}</div>
           <div class="text-sm text-zinc-100">${item.message}</div>
         `;
         box.appendChild(bubble);
       });
-      box.scrollTop = box.scrollHeight;
-    }
 
-    function loadUsers() {
-      const userList = document.getElementById("userList");
-      const users = JSON.parse(localStorage.getItem("marshDiscussionUsers") || "[]");
-      userList.innerHTML = "";
-      users.forEach(u => {
-        const li = document.createElement("li");
-        li.innerHTML = `<span class="text-green-400">●</span> ${u}`;
-        userList.appendChild(li);
-      });
+      box.scrollTop = box.scrollHeight;
     }
   </script>
 </body>
