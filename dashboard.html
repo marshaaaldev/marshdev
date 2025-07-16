@@ -5,6 +5,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Dashboard Jasa - MarshDev</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .fade-in {
+      animation: fadeIn 1s ease-out forwards;
+      opacity: 0;
+    }
+    @keyframes fadeIn {
+      to {
+        opacity: 1;
+      }
+    }
+  </style>
 </head>
 <body class="bg-white text-gray-900 text-sm font-sans">
   <header class="p-4 border-b">
@@ -16,19 +27,24 @@
     </nav>
   </header>
 
-  <main class="p-4">
-    <!-- ✅ Daftar Jasa -->
-    <section class="mb-6">
-      <h2 class="text-md font-semibold mb-2 text-center">Jasa Tersedia:</h2>
-      <ul class="list-disc list-inside space-y-1 text-gray-700">
-        <li>🔧 Jasa Developer Website (Static / Dynamic)</li>
-        <li>🛠️ Jasa Pembuatan Forum Diskusi</li>
-        <li>💬 Jasa Scripting: SAMP, JavaScript, Python, dsb.</li>
-      </ul>
+  <main class="p-4 space-y-8">
+    <!-- ✅ Jasa Developer -->
+    <section class="fade-in">
+      <h2 class="text-md font-semibold mb-2 text-center">🔧 Jasa Developer Website</h2>
+      <p class="text-sm text-center text-gray-600 mb-4">
+        Developer profesional untuk kebutuhan custom. Cocok buat personal, komunitas, atau bisnis.
+      </p>
+      <div class="bg-gray-100 rounded p-4 shadow-sm max-w-md mx-auto space-y-2 text-sm text-gray-800">
+        <ul class="list-disc list-inside">
+          <li>💻 <strong>1 Hari</strong>: Update 3–4 kali per hari</li>
+          <li>📆 <strong>1 Minggu</strong>: Rp100.000</li>
+          <li>🗓️ <strong>1 Bulan</strong>: Rp300.000 (bebas update apa pun)</li>
+        </ul>
+      </div>
     </section>
 
     <!-- ✅ Form Order -->
-    <section>
+    <section class="fade-in">
       <h2 class="text-md font-semibold mb-2 text-center">Formulir Pemesanan:</h2>
       <form class="space-y-3 max-w-md mx-auto">
         <input type="text" placeholder="Nama kamu" class="w-full p-2 border rounded text-sm" required />
@@ -47,52 +63,4 @@
   </footer>
 </body>
 </html>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Dashboard Jasa - MarshDev</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-</head>
-<body class="bg-white text-gray-900 text-sm font-sans">
-  <header class="p-4 border-b">
-    <h1 class="text-xl font-bold text-center">💼 Dashboard Jasa Developer</h1>
-    <nav class="mt-2 text-center space-x-2 text-blue-500">
-      <a href="index.html">Home</a>
-      <a href="forum.html">Forum</a>
-      <a href="dashboard.html">Dashboard</a>
-    </nav>
-  </header>
 
-  <main class="p-4">
-    <!-- ✅ Daftar Jasa -->
-    <section class="mb-6">
-      <h2 class="text-md font-semibold mb-2 text-center">Jasa Tersedia:</h2>
-      <ul class="list-disc list-inside space-y-1 text-gray-700">
-        <li>🔧 Jasa Developer Website (Static / Dynamic)</li>
-        <li>🛠️ Jasa Pembuatan Forum Diskusi</li>
-        <li>💬 Jasa Scripting: SAMP, JavaScript, Python, dsb.</li>
-      </ul>
-    </section>
-
-    <!-- ✅ Form Order -->
-    <section>
-      <h2 class="text-md font-semibold mb-2 text-center">Formulir Pemesanan:</h2>
-      <form class="space-y-3 max-w-md mx-auto">
-        <input type="text" placeholder="Nama kamu" class="w-full p-2 border rounded text-sm" required />
-        <input type="email" placeholder="Email aktif" class="w-full p-2 border rounded text-sm" required />
-        <textarea placeholder="Jelaskan kebutuhan kamu..." rows="4" class="w-full p-2 border rounded text-sm" required></textarea>
-        <button type="submit" class="bg-blue-600 text-white px-4 py-2 rounded w-full">
-          🚀 Kirim Permintaan
-        </button>
-      </form>
-    </section>
-  </main>
-
-  <!-- ✅ Footer -->
-  <footer class="text-center text-xs text-gray-400 mt-10 mb-4">
-    © 2025 MarshDev. Dibuat dengan ❤️ oleh MarshaaalDev.
-  </footer>
-</body>
-</html>
