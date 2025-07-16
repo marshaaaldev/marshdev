@@ -8,7 +8,6 @@
 </head>
 <body class="bg-zinc-900 text-white font-sans">
 
-  <!-- Header -->
   <header class="p-4 border-b border-zinc-800 bg-zinc-950">
     <div class="flex justify-between items-center">
       <h1 class="text-lg font-semibold">💬 MarshDev Chat</h1>
@@ -16,12 +15,10 @@
     </div>
   </header>
 
-  <!-- Chat Layout -->
   <main class="max-w-3xl mx-auto px-4 pt-4 pb-28">
     <div id="chatBox" class="space-y-4 overflow-y-auto"></div>
   </main>
 
-  <!-- Input Box -->
   <div class="fixed bottom-0 left-0 right-0 bg-zinc-950 border-t border-zinc-800 p-3">
     <div class="max-w-3xl mx-auto flex gap-2">
       <input
@@ -44,12 +41,12 @@
   <script src="https://unpkg.com/@supabase/supabase-js@2.39.5/dist/umd/supabase.min.js"></script>
 
   <script>
-    const supabase = supabase.createClient(
+    const { createClient } = supabase;
+    const supabaseClient = createClient(
       "https://egawvajdbuxobbatzigt.supabase.co",
       "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImVnYXd2YWpkYnV4b2JiYXR6aWd0Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTI1OTY5NTYsImV4cCI6MjA2ODE3Mjk1Nn0.UHSmEf4iOuJ7TRCIUj6eICS90L8fkqHq10GhUXzVcqo"
     );
 
-    // Ganti nanti jadi username dari login
     const username = "Guest";
 
     async function sendMessage() {
@@ -57,30 +54,36 @@
       const message = msgInput.value.trim();
       if (!message) return;
 
-      await supabase.from("chat").insert([{ name: username, message }]);
-      msgInput.value = "";
+      const { error } = await supabaseClient.from("chat").insert([{ name: username, message }]);
+      if (error) {
+        console.error("Insert Error:", error.message);
+        alert("Gagal kirim pesan: " + error.message);
+      } else {
+        msgInput.value = "";
+        loadChat(); // auto refresh
+      }
     }
 
     async function loadChat() {
-      const { data } = await supabase
+      const { data, error } = await supabaseClient
         .from("chat")
         .select("*")
-        .order("created_at", { ascending: true })
-        .limit(100);
+        .order("created_at", { ascending: true });
 
       const box = document.getElementById("chatBox");
       box.innerHTML = "";
-      data.forEach((item) => {
-        const msg = document.createElement("div");
-        msg.className = "bg-zinc-800 p-3 rounded-xl w-fit max-w-[80%]";
-        msg.innerHTML = `
-          <div class="text-xs text-zinc-400 mb-1">${item.name} • ${new Date(item.created_at).toLocaleTimeString()}</div>
-          <div class="text-sm">${item.message}</div>
-        `;
-        box.appendChild(msg);
-      });
-
-      box.scrollTop = box.scrollHeight;
+      if (data) {
+        data.forEach((item) => {
+          const msg = document.createElement("div");
+          msg.className = "bg-zinc-800 p-3 rounded-xl w-fit max-w-[80%]";
+          msg.innerHTML = `
+            <div class="text-xs text-zinc-400 mb-1">${item.name} • ${new Date(item.created_at).toLocaleTimeString()}</div>
+            <div class="text-sm">${item.message}</div>
+          `;
+          box.appendChild(msg);
+        });
+        box.scrollTop = box.scrollHeight;
+      }
     }
 
     function handleEnter(e) {
@@ -89,7 +92,6 @@
       }
     }
 
-    // Load awal & auto refresh tiap 2 detik
     loadChat();
     setInterval(loadChat, 2000);
   </script>
