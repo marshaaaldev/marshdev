@@ -1,63 +1,30 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>MarshDev - Forum & Skill</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-</head>
-<body class="bg-zinc-900 text-zinc-100 text-sm font-sans">
-  <!-- ✅ Header Baru Keren -->
-  <header class="p-4 border-b border-zinc-800 bg-zinc-950">
-    <div class="flex justify-center items-center gap-3">
-      <img src="https://cdn-icons-png.flaticon.com/512/3064/3064197.png" alt="MarshDev Logo" class="w-7 h-7" />
-      <h1 class="text-xl font-bold tracking-wide">MarshDev Forum</h1>
-    </div>
-    <nav class="mt-2 text-center space-x-2 text-indigo-400">
-      <a href="index.html">Home</a>
-      <a href="forum.html">Forum</a>
-      <a href="dashboard.html">Dashboard</a>
-    </nav>
-  </header>
+<!-- ✅ Header dengan Logo -->
+<header class="p-4 border-b border-zinc-800 bg-zinc-950">
+  <div class="flex justify-center items-center gap-3 mb-2">
+    <img src="https://cdn-icons-png.flaticon.com/512/3064/3064197.png" alt="MarshDev Logo" class="w-7 h-7" />
+    <h1 class="text-xl font-bold tracking-wide">MarshDev Forum</h1>
+  </div>
 
-  <!-- Konten Tetap Sama -->
-  <main class="p-4">
-    <h2 class="text-md font-semibold mb-2 text-center">Skill Aktif:</h2>
-    <div class="grid grid-cols-3 gap-3 place-items-center">
-      <div class="flex flex-col items-center">
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" class="w-6 h-6" />
-        <span class="text-xs mt-1 text-zinc-400">C++</span>
-      </div>
-      <div class="flex flex-col items-center">
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" class="w-6 h-6" />
-        <span class="text-xs mt-1 text-zinc-400">JavaScript</span>
-      </div>
-      <div class="flex flex-col items-center">
-        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/ruby.svg" class="w-6 h-6" />
-        <span class="text-xs mt-1 text-zinc-400">Ruby</span>
-      </div>
-      <div class="flex flex-col items-center">
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" class="w-6 h-6" />
-        <span class="text-xs mt-1 text-zinc-400">Python</span>
-      </div>
-      <div class="flex flex-col items-center">
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" class="w-6 h-6" />
-        <span class="text-xs mt-1 text-zinc-400">Node.js</span>
-      </div>
-    </div>
-
-    <p class="text-center text-sm mt-6 text-zinc-400">
-      MarshDev adalah komunitas terbuka untuk para coder & scripter Indonesia. Tempat diskusi, belajar, dan pesan jasa scripting terpercaya.
-    </p>
-
-    <div class="flex justify-center gap-4 mt-6">
-      <a href="forum.html" class="bg-indigo-600 hover:bg-indigo-700 text-white px-4 py-2 rounded text-sm">💬 Buka Forum</a>
-      <a href="dashboard.html" class="bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded text-sm">🛠️ Pesan Jasa</a>
-    </div>
-  </main>
-
-  <footer class="text-center text-xs text-zinc-500 mt-10 mb-4">
-    © 2025 MarshDev. Dibuat dengan ❤️ oleh MarshaaalDev.
-  </footer>
-</body>
-</html>
+  <!-- ✅ Navbar Keren -->
+  <nav class="flex justify-center gap-4">
+    <a href="index.html" class="flex items-center gap-1 px-3 py-1.5 rounded-md text-sm font-medium text-indigo-400 hover:bg-indigo-600/20 transition">
+      <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l9-9 9 9M4 10v10h16V10" />
+      </svg>
+      Home
+    </a>
+    <a href="forum.html" class="flex items-center gap-1 px-3 py-1.5 rounded-md text-sm font-medium text-indigo-400 hover:bg-indigo-600/20 transition">
+      <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8h2a2 2 0 012 2v10H3V10a2 2 0 012-2h2" />
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 12v.01" />
+      </svg>
+      Forum
+    </a>
+    <a href="dashboard.html" class="flex items-center gap-1 px-3 py-1.5 rounded-md text-sm font-medium text-indigo-400 hover:bg-indigo-600/20 transition">
+      <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h6v6H3V3zm12 0h6v6h-6V3zm-6 12h6v6h-6v-6zM3 15h6v6H3v-6z" />
+      </svg>
+      Dashboard
+    </a>
+  </nav>
+</header>
