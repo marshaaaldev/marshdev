@@ -3,87 +3,178 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Testimoni - Aesthic Luminar</title>
-  <link rel="stylesheet" href="style-testimoni.css" />
-  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+  <title>Testimoni Client | MarshalDev</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background-color: #0d111d;
+      color: #ffffff;
+    }
+
+    header {
+      background-color: #10162c;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    }
+
+    header a {
+      color: #a88add;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .hero {
+      background: linear-gradient(135deg, #1a1f35, #13192a);
+      padding: 3rem 2rem;
+      text-align: center;
+      border-bottom: 2px solid #7e6bc4;
+    }
+
+    .hero h1 {
+      font-size: 2.5rem;
+      color: #a88add;
+      margin-bottom: 1rem;
+    }
+
+    .hero p {
+      font-size: 1.1rem;
+      color: #ccc;
+    }
+
+    .highlight-box {
+      margin-top: 1.5rem;
+      background-color: #1e233a;
+      display: inline-block;
+      padding: 1rem 2rem;
+      border-radius: 10px;
+      border: 1px solid #7e6bc4;
+    }
+
+    .highlight-box span {
+      display: block;
+      margin: 0.3rem 0;
+      font-weight: 600;
+      color: #f7d774;
+    }
+
+    .testimoni-section {
+      padding: 2rem;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .testimoni-card {
+      background-color: #1a1f35;
+      padding: 1.2rem;
+      border-radius: 10px;
+      border: 1px solid #2d3350;
+      transition: 0.3s ease;
+      position: relative;
+    }
+
+    .testimoni-card:hover {
+      transform: translateY(-5px);
+      border-color: #a88add;
+    }
+
+    .client-name {
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+      color: #a88add;
+    }
+
+    .client-quote {
+      font-style: italic;
+      font-size: 0.95rem;
+      color: #ddd;
+    }
+
+    .badge {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background-color: #a88add;
+      color: #fff;
+      font-size: 0.75rem;
+      padding: 0.3rem 0.6rem;
+      border-radius: 20px;
+      font-weight: bold;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      color: #aaa;
+      background-color: #0d111d;
+      border-top: 1px solid #2c2f45;
+    }
+  </style>
 </head>
 <body>
-  <section class="container">
-    <h2>Testimoni Client</h2>
-    <p class="subheading">Apa kata mereka tentang Aesthic Luminar?</p>
 
-    <div class="testimonial-grid">
+  <header>
+    <a href="index.html">← Kembali ke Beranda</a>
+    <strong>Testimoni MarshalDev</strong>
+  </header>
 
-      <!-- Testimoni 1 -->
-      <div class="testimonial-card" data-animate>
-        <p class="testimonial-quote">
-          "Pelayanan cepat dan rapi. Gue minta sistem dynamic langsung dikasih lebih dari ekspektasi. Gokil bro!"
-        </p>
-        <p class="client-name">Rafli Aditya</p>
-        <p class="client-role">Owner Server Paradise RP</p>
-      </div>
-
-      <!-- Testimoni 2 -->
-      <div class="testimonial-card" data-animate>
-        <p class="testimonial-quote">
-          "Script textdraw custom-nya bukan kaleng-kaleng! Tampilan jadi makin elegan dan responsif."
-        </p>
-        <p class="client-name">Andri Satria</p>
-        <p class="client-role">Founder Zona RP</p>
-      </div>
-
-      <!-- Testimoni 3 -->
-      <div class="testimonial-card" data-animate>
-        <p class="testimonial-quote">
-          "Support 24 jam asli responsif banget. Ada bug langsung dibantu fix. Recommended parah!"
-        </p>
-        <p class="client-name">Fikri Ramadan</p>
-        <p class="client-role">Owner Titan Legacy</p>
-      </div>
-
-      <!-- Testimoni 4 -->
-      <div class="testimonial-card" data-animate>
-        <p class="testimonial-quote">
-          "Bukan sekadar dev, tapi partner yang ngerti kebutuhan server lo. Gua repeat order berkali-kali!"
-        </p>
-        <p class="client-name">Zaki Ananda</p>
-        <p class="client-role">CEO Moonlight RP</p>
-      </div>
-
-      <!-- Testimoni 5 -->
-      <div class="testimonial-card" data-animate>
-        <p class="testimonial-quote">
-          "Gua cuma bilang mau gaya klasik SA-MP. Sisanya tinggal duduk manis, hasilnya? Estetik maksimal!"
-        </p>
-        <p class="client-name">Reza Mahardika</p>
-        <p class="client-role">Admin Aesthic Luminar</p>
-      </div>
-
-      <!-- Testimoni 6 (kutipan gabungan) -->
-      <div class="testimonial-card" data-animate>
-        <p class="testimonial-quote">
-          "Dari sistem forum SA-MP, fitur dynamic, textdraw, hingga desain web profesional — semuanya ditangani dengan totalitas. Gua bukan sekadar puas, tapi kagum!"
-        </p>
-        <p class="client-name">Andra Lutfiansyah Marshal</p>
-        <p class="client-role">Owner Aesthic Luminar</p>
-      </div>
-
+  <section class="hero">
+    <h1>Testimoni Client MarshalDev</h1>
+    <p>Kami dipercaya oleh puluhan client untuk project SA-MP, hosting, dan website desain</p>
+    <div class="highlight-box">
+      <span>💎 Developer Terpercaya (98%)</span>
+      <span>🚀 Store Hosting Terbaik (97%)</span>
+      <span>✅ Recommended by Clients (99%)</span>
     </div>
   </section>
 
-  <!-- Scroll animation script -->
-  <script>
-    const animItems = document.querySelectorAll('[data-animate]');
-    const scrollAnimate = () => {
-      animItems.forEach(item => {
-        const rect = item.getBoundingClientRect();
-        if (rect.top < window.innerHeight - 100) {
-          item.classList.add('active');
-        }
-      });
-    };
-    window.addEventListener('scroll', scrollAnimate);
-    scrollAnimate();
-  </script>
+  <section class="testimoni-section">
+    <!-- 30 Testimoni Realistic -->
+    <!-- Ganti nama dan kutipan sesukamu kalau mau -->
+    <!-- Awal -->
+    <div class="testimoni-card"><span class="badge">⭐️ 5.0</span><div class="client-name">Rafli</div><div class="client-quote">Jasa developer paling worth it, gua request fitur langsunh satset wkwk keren</div></div>
+    <div class="testimoni-card"><span class="badge">⭐️ 5.0</span><div class="client-name">Kilua</div><div class="client-quote">Gamemode oldschool keren sih karena gua ngikutin luminar dari 0 makanya sange.</div></div>
+    <div class="testimoni-card"><span class="badge">⭐️ 5.0</span><div class="client-name">Ambasing</div><div class="client-quote">Setup cepat dan responsif. Supportnya nya juga bagus, bintang nya sampe jebol wok</div></div>
+    <div class="testimoni-card"><span class="badge">⭐️ 4.9</span><div class="client-name">FikriSamp</div><div class="client-quote">Gua jasa setup+beli gamemode udah kaya setan tanganya cepet bet tiba tiba kelar</div></div>
+    <div class="testimoni-card"><span class="badge">⭐️ 5.0</span><div class="client-name">Zeevan0k</div><div class="client-quote">Hosting murah tapi kualitas bintang lima, repeat order wajib lah gile</div></div>
+    <div class="testimoni-card"><span class="badge">⭐️ 4.8</span><div class="client-name">Hanzo</div><div class="client-quote">Jasa dev sebulan dan setiap pengerjaan selalu bilang sampai selesai pun bilang list update udeh di kerjain top banget mas next lagi</div></div>
+    <div class="testimoni-card"><span class="badge">⭐️ 5.0</span><div class="client-name">Khal</div><div class="client-quote">Pelayanan cepat dan sangat komunikatif. Terbaik sih ini.</div></div>
+    <div class="testimoni-card"><span class="badge">⭐️ 5.0</span><div class="client-name">Imran</div><div class="client-quote">Gamemodenya tinggal pakai dan sudah optimal tanpa kendala bug merosahkan wkwkwk</div></div>
+    <div class="testimoni-card"><span class="badge">⭐️ 4.7</span><div class="client-name">Ilham</div><div class="client-quote">Saya beli hosting ryzen 16gb buset ngebutnya kaya lagi balap dikejar polisi</div></div>
+    <div class="testimoni-card"><span class="badge">⭐️ 5.0</span><div class="client-name">Rendi</div><div class="client-quote">Work it browww gua fix bug sama jasa script td memuaskan</div></div>
+
+    <div class="testimoni-card"><span class="badge">⭐️ 4.9</span><div class="client-name">Niko</div><div class="client-quote">Gua beli GM dan hosting, hasilnya mantap, langsung jalan lancar</div></div>
+    <div class="testimoni-card"><span class="badge">⭐️ 4.8</span><div class="client-name">Johan</div><div class="client-quote">Desain webnya keren abis. Gua pake buat store gua juga.</div></div>
+    <div class="testimoni-card"><span class="badge">⭐️ 5.0</span><div class="client-name">Devzyy</div><div class="client-quote">Hostingnya tahan banting, cocok buat server ramai player!</div></div>
+    <div class="testimoni-card"><span class="badge">⭐️ 5.0</span><div class="client-name">Malaysia pride owner</div><div class="client-quote">Support 24 jam, enak banget kalau ada kendala langsung kelar.</div></div>
+    <div class="testimoni-card"><span class="badge">⭐️ 4.9</span><div class="client-name">Fauzan</div><div class="client-quote">Gua order textdraw & fitur dynamic, langsung ciamik jadinya.</div></div>
+    <div class="testimoni-card"><span class="badge">⭐️ 5.0</span><div class="client-name">Tegar</div><div class="client-quote">Mas marshal ini hidden gem sih. Kualitas premium harga murah.</div></div>
+    <div class="testimoni-card"><span class="badge">⭐️ 5.0</span><div class="client-name">Nando</div><div class="client-quote">Ga nyangka hasilnya bagus banget padahal baru coba sekali.</div></div>
+    <div class="testimoni-card"><span class="badge">⭐️ 5.0</span><div class="client-name">Ojan</div><div class="client-quote">Langsung gua sewa 1 bulan jasa dev, full fitur dan pengerjaanya pun teliti.</div></div>
+    <div class="testimoni-card"><span class="badge">⭐️ 4.8</span><div class="client-name">Yoga</div><div class="client-quote">Next order hosting lagi mas bintang 100</div></div>
+    <div class="testimoni-card"><span class="badge">⭐️ 4.9</span><div class="client-name">Kevin</div><div class="client-quote">Responsive dan profesional. Bakal order lagi pastinya.</div></div>
+
+    <div class="testimoni-card"><span class="badge">⭐️ 5.0</span><div class="client-name">Yuda</div><div class="client-quote">Bikin website jadi makin keren buat portofolio gua.</div></div>
+    <div class="testimoni-card"><span class="badge">⭐️ 5.0</span><div class="client-name">Riyan</div><div class="client-quote">Wkwk gua udah frustasi sama bug tai ini dan gua pake jasa dev marshal, ternyata bug nya gampang banget sama mas nya :(</div></div>
+    <div class="testimoni-card"><span class="badge">⭐️ 4.7</span><div class="client-name">Jamal</div><div class="client-quote">Pelayanan ramah dan hasil kerja cepat, laiksss banget.</div></div>
+    <div class="testimoni-card"><span class="badge">⭐️ 5.0</span><div class="client-name">Eka</div><div class="client-quote">Fix ini langganan gua buat server-server gua berikutnya.</div></div>
+    <div class="testimoni-card"><span class="badge">⭐️ 4.8</span><div class="client-name">Agus</div><div class="client-quote">Gamemode fivem keren sih beds dari yang lain!</div></div>
+    <div class="testimoni-card"><span class="badge">⭐️ 5.0</span><div class="client-name">Putra</div><div class="client-quote">Fast respon dan kerjanya rapi. Gua puas banget bro!</div></div>
+    <div class="testimoni-card"><span class="badge">⭐️ 4.9</span><div class="client-name">Wahyu Aripentod</div><div class="client-quote">Beli hosting disini awalnya ragu jir, ternyata ngebut nya masyallah.</div></div>
+    <div class="testimoni-card"><span class="badge">⭐️ 5.0</span><div class="client-name">Levalne</div><div class="client-quote">Mau fitur apa aja tinggal sebut, langsung dibikinin.</div></div>
+    <div class="testimoni-card"><span class="badge">⭐️ 4.9</span><div class="client-name">Dani</div><div class="client-quote">Ga bakal pindah ke tempat lain buat beli hosting</div></div>
+    <div class="testimoni-card"><span class="badge">⭐️ 5.0</span><div class="client-name">Farel</div><div class="client-quote">Profesional dan hasil kerja konsisten bagusnya.</div></div>
+    <div class="testimoni-card"><span class="badge">⭐️ 5.0</span><div class="client-name">Liyonard</div><div class="client-quote">Top banget wok Harga bersahabat, kualitas melebihi ekspektasi.</div></div>
+  </section>
+
+  <footer>
+    &copy; 2025 MarshalDev. All rights reserved.
+  </footer>
+
 </body>
 </html>
