@@ -1,12 +1,11 @@
 /* ===== Global Styles ===== */
 body {
-  background-color: #0b1f3a; /* biru navy tua */
+  background-color: #0b1f3a;
   color: #ffffff;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   margin: 0;
   padding: 0;
 }
-
 a {
   color: #4aa5f0;
   text-decoration: none;
@@ -15,134 +14,71 @@ a:hover {
   color: #72c3fc;
 }
 
-/* ===== Container ===== */
+/* ===== Header ===== */
+.header {
+  text-align: center;
+  padding: 40px 20px;
+}
+.typing-text {
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 3px solid #fff;
+  width: 0;
+  animation: typing 3s steps(40, end) forwards, blink 0.75s step-end infinite;
+  font-size: 2em;
+  font-weight: bold;
+  color: #fff;
+  text-shadow: 0 0 10px #89b4fa;
+}
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+@keyframes blink {
+  50% { border-color: transparent }
+}
+
+/* ===== Gambar Banner Full ===== */
+.full-banner {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto 40px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.4);
+}
+
+/* ===== Skill Section ===== */
 .container {
   max-width: 1140px;
   margin: auto;
   padding: 20px;
 }
-
-/* ===== Header ===== */
-.header {
-  text-align: center;
-  margin-bottom: 40px;
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+  margin-top: 20px;
 }
-
-.header h1 {
-  font-size: 36px;
-  font-weight: bold;
-  color: #ffffff;
-}
-
-.badge {
-  font-size: 0.9em;
-  background-color: #198754;
-  color: white;
-  padding: 5px 10px;
-  border-radius: 10px;
-}
-
-/* ===== Paket Card ===== */
-.paket {
+.skill-card {
   background-color: #122b52;
+  padding: 20px;
   border-radius: 15px;
-  padding: 25px;
   text-align: center;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  width: 120px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
   transition: transform 0.2s ease;
 }
-.paket:hover {
-  transform: translateY(-5px);
+.skill-card:hover {
+  transform: scale(1.05);
 }
-
-.paket h4 {
-  color: #ffffff;
+.skill-card img {
+  width: 50px;
+  height: 50px;
 }
-.paket p {
-  color: #cccccc;
-}
-.paket h5 {
-  color: #ffc107;
-}
-.paket .btn {
+.skill-card p {
   margin-top: 10px;
-}
-
-/* ===== Formulir ===== */
-.order-form {
-  background-color: #122b52;
-  border-radius: 15px;
-  padding: 30px;
-  margin-top: 40px;
-}
-.order-form h4 {
-  margin-bottom: 25px;
-  color: #ffffff;
-}
-.order-form .form-label {
-  color: #cccccc;
-}
-.order-form .form-control {
-  background-color: #1d3a6c;
-  border: none;
-  color: white;
-}
-.order-form .form-control:focus {
-  background-color: #22457f;
-  outline: none;
-  box-shadow: none;
-}
-.order-form .btn-success {
-  background-color: #28a745;
-  border: none;
-}
-
-/* ===== Testimoni ===== */
-.testimoni {
-  background-color: #1a3663;
-  border-left: 4px solid #ffc107;
-  padding: 15px 20px;
-  margin-bottom: 15px;
-  border-radius: 10px;
-  font-size: 0.95rem;
-}
-.testimoni strong {
-  color: #ffffff;
-}
-
-/* ===== Project Image Style ===== */
-.project-image {
-  width: 100%;
-  max-width: 100%;
-  border-radius: 12px;
-  margin-top: 1rem;
-  display: block;
-}
-
-/* ===== Responsive ===== */
-@media (max-width: 768px) {
-  .paket {
-    margin-bottom: 20px;
-  }
-}
-
-.typing-effect {
-  overflow: hidden;
-  border-right: 2px solid #fff;
-  white-space: nowrap;
-  margin: 0 auto;
-  letter-spacing: 2px;
-  animation: typing 3.5s steps(40, end), blink .75s step-end infinite;
-  width: max-content;
-  font-family: 'Courier New', monospace;
-  color: #fff;
-}
-
-@keyframes typing {
-  from { width: 0 }
-  to { width: 100% }
-}
-
-@keyframes blink {
-  50% { border-color: transparent }
+  color: #ccc;
+  font-size: 0.95em;
 }
