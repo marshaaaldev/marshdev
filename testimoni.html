@@ -2,71 +2,88 @@
 <html lang="id">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Testimoni - Aesthic Luminar</title>
-  <link rel="stylesheet" href="style-testimoni.css">
-  <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style-testimoni.css" />
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
 </head>
 <body>
+  <section class="container">
+    <h2>Testimoni Client</h2>
+    <p class="subheading">Apa kata mereka tentang Aesthic Luminar?</p>
 
-  <section class="testimonial-section">
-    <div class="container">
-      <h1 class="section-title">Testimoni Client Kami</h1>
-      <p class="section-subtitle">Kata mereka tentang layanan <span class="highlight">Aesthic Luminar</span>.</p>
+    <div class="testimonial-grid">
 
-      <div class="testimonial-grid">
-
-        <!-- Testimoni 1 -->
-        <div class="testimonial-card">
-          <p class="quote">“Semenjak pakai jasa MarshalDev, server gue keliatan jauh lebih profesional. Aesthic banget!”</p>
-          <div class="client-info">
-            <img src="https://i.ibb.co/XCs9yTS/user1.jpg" alt="Client 1">
-            <div>
-              <h3 class="client-name">Zidane</h3>
-              <p class="client-role">Owner LuminarRP</p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Testimoni 2 -->
-        <div class="testimonial-card">
-          <p class="quote">“MarshalDev bukan sekadar develop, tapi bener-bener bikin identitas baru buat server gua. Keren!”</p>
-          <div class="client-info">
-            <img src="https://i.ibb.co/1rZkKTy/user2.jpg" alt="Client 2">
-            <div>
-              <h3 class="client-name">Raka</h3>
-              <p class="client-role">Founder DreamProject</p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Testimoni 3 -->
-        <div class="testimonial-card">
-          <p class="quote">“Dengan Aesthic Luminar, tampilan forum gua jadi punya jiwa. Lebih hidup dan cakep!”</p>
-          <div class="client-info">
-            <img src="https://i.ibb.co/gvtJjkf/user3.jpg" alt="Client 3">
-            <div>
-              <h3 class="client-name">Alvin</h3>
-              <p class="client-role">Scripter Roleplay</p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Testimoni 4 -->
-        <div class="testimonial-card">
-          <p class="quote">“Desainnya clean banget. MarshalDev itu bukan sekadar jasa, tapi partner dalam project!”</p>
-          <div class="client-info">
-            <img src="https://i.ibb.co/LRyx5VS/user4.jpg" alt="Client 4">
-            <div>
-              <h3 class="client-name">Rehan</h3>
-              <p class="client-role">Dev Server Indie</p>
-            </div>
-          </div>
-        </div>
-
+      <!-- Testimoni 1 -->
+      <div class="testimonial-card" data-animate>
+        <p class="testimonial-quote">
+          "Pelayanan cepat dan rapi. Gue minta sistem dynamic langsung dikasih lebih dari ekspektasi. Gokil bro!"
+        </p>
+        <p class="client-name">Rafli Aditya</p>
+        <p class="client-role">Owner Server Paradise RP</p>
       </div>
+
+      <!-- Testimoni 2 -->
+      <div class="testimonial-card" data-animate>
+        <p class="testimonial-quote">
+          "Script textdraw custom-nya bukan kaleng-kaleng! Tampilan jadi makin elegan dan responsif."
+        </p>
+        <p class="client-name">Andri Satria</p>
+        <p class="client-role">Founder Zona RP</p>
+      </div>
+
+      <!-- Testimoni 3 -->
+      <div class="testimonial-card" data-animate>
+        <p class="testimonial-quote">
+          "Support 24 jam asli responsif banget. Ada bug langsung dibantu fix. Recommended parah!"
+        </p>
+        <p class="client-name">Fikri Ramadan</p>
+        <p class="client-role">Owner Titan Legacy</p>
+      </div>
+
+      <!-- Testimoni 4 -->
+      <div class="testimonial-card" data-animate>
+        <p class="testimonial-quote">
+          "Bukan sekadar dev, tapi partner yang ngerti kebutuhan server lo. Gua repeat order berkali-kali!"
+        </p>
+        <p class="client-name">Zaki Ananda</p>
+        <p class="client-role">CEO Moonlight RP</p>
+      </div>
+
+      <!-- Testimoni 5 -->
+      <div class="testimonial-card" data-animate>
+        <p class="testimonial-quote">
+          "Gua cuma bilang mau gaya klasik SA-MP. Sisanya tinggal duduk manis, hasilnya? Estetik maksimal!"
+        </p>
+        <p class="client-name">Reza Mahardika</p>
+        <p class="client-role">Admin Aesthic Luminar</p>
+      </div>
+
+      <!-- Testimoni 6 (kutipan gabungan) -->
+      <div class="testimonial-card" data-animate>
+        <p class="testimonial-quote">
+          "Dari sistem forum SA-MP, fitur dynamic, textdraw, hingga desain web profesional — semuanya ditangani dengan totalitas. Gua bukan sekadar puas, tapi kagum!"
+        </p>
+        <p class="client-name">Andra Lutfiansyah Marshal</p>
+        <p class="client-role">Owner Aesthic Luminar</p>
+      </div>
+
     </div>
   </section>
 
+  <!-- Scroll animation script -->
+  <script>
+    const animItems = document.querySelectorAll('[data-animate]');
+    const scrollAnimate = () => {
+      animItems.forEach(item => {
+        const rect = item.getBoundingClientRect();
+        if (rect.top < window.innerHeight - 100) {
+          item.classList.add('active');
+        }
+      });
+    };
+    window.addEventListener('scroll', scrollAnimate);
+    scrollAnimate();
+  </script>
 </body>
 </html>
