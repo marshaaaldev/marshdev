@@ -5,8 +5,35 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>MarshDev - Forum & Skill</title>
   <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet" href="js.css" />
+  <style>
+    /* Tambahan dari style.css */
+    ::-webkit-scrollbar {
+      width: 6px;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #a88add;
+      border-radius: 6px;
+    }
+    ::selection {
+      background: #a88add;
+      color: white;
+    }
+    .btn-glow {
+      background: linear-gradient(90deg, #a88add, #7e6bc4);
+      color: white;
+      box-shadow: 0 0 10px #a88add;
+      transition: all 0.3s ease;
+    }
+    .btn-glow:hover {
+      box-shadow: 0 0 20px #a88add, 0 0 30px #7e6bc4;
+    }
+    body {
+      scroll-behavior: smooth;
+    }
+    .hero-text span {
+      color: #a88add;
+    }
+  </style>
 </head>
 <body class="bg-[#0f172a] text-white text-sm font-sans">
   <header class="p-4 bg-[#1e293b] border-b border-blue-900 shadow-md">
@@ -50,8 +77,8 @@
 
     <div class="text-center mt-6">
       <p class="mb-2 text-blue-200 font-medium">Punya project? Butuh developer?</p>
-      <a href="dashboard.html"
-         class="bg-blue-600 hover:bg-blue-700 text-white font-semibold px-5 py-2 rounded-full transition duration-300 ease-in-out shadow-md">
+      <a href="https://discord.com/users/yourid" target="_blank"
+         class="btn-glow font-semibold px-5 py-2 rounded-full transition duration-300 ease-in-out shadow-md">
         Cek Jasa Developer Sekarang 🚀
       </a>
     </div>
