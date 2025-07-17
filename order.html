@@ -1,59 +1,194 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Form Pemesanan | MarshDev</title>
-  <script src="https://cdn.tailwindcss.com"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dashboard - MarshDev</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      background-color: #0e1628;
+      color: white;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4 {
+      color: #ffffff;
+    }
+
+    nav {
+      background-color: #101a30;
+    }
+
+    .nav-link.active {
+      font-weight: 600;
+      color: #b983ff !important;
+    }
+
+    .pricing-card {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .pricing-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    }
+
+    .testimoni {
+      background-color: #192a4d;
+      border-radius: 1rem;
+      padding: 1rem;
+      margin: 1rem 0;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .testimoni:hover {
+      transform: scale(1.02);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    }
+
+    .badge-pro {
+      background: linear-gradient(90deg, #6f42c1, #b983ff);
+      color: white;
+      font-weight: 600;
+      padding: 0.4rem 1rem;
+      border-radius: 50px;
+      margin-bottom: 1rem;
+      display: inline-block;
+      animation: popIn 0.8s ease-out;
+    }
+
+    @keyframes popIn {
+      0% {
+        transform: scale(0.7);
+        opacity: 0;
+      }
+
+      100% {
+        transform: scale(1);
+        opacity: 1;
+      }
+    }
+
+    .fade-in {
+      opacity: 0;
+      animation: fadeIn 1s ease forwards;
+    }
+
+    @keyframes fadeIn {
+      to {
+        opacity: 1;
+      }
+    }
+  </style>
 </head>
-<body class="bg-zinc-900 text-white font-sans">
-  <header class="p-4 bg-zinc-800 border-b border-zinc-700 text-center">
-    <h1 class="text-2xl font-bold">📩 Form Pemesanan Project</h1>
-    <nav class="mt-2 space-x-4 text-blue-400">
-      <a href="index.html">Home</a>
-      <a href="dashboard.html">Dashboard</a>
-      <a href="preview.html">Preview GM</a>
-    </nav>
-  </header>
 
-  <main class="p-6 max-w-xl mx-auto">
-    <p class="mb-4 text-center text-sm text-gray-300">Isi form berikut untuk memesan jasa developer. Tim kami akan menghubungi kamu lewat Discord secepatnya.</p>
-
-    <form class="bg-zinc-800 p-6 rounded-lg shadow-lg space-y-4" action="https://formsubmit.co/your-email@example.com" method="POST">
-      <input type="hidden" name="_captcha" value="false">
-      <input type="hidden" name="_template" value="table">
-
-      <div>
-        <label class="block text-sm mb-1">Nama Lengkap</label>
-        <input type="text" name="nama" required class="w-full p-2 rounded bg-zinc-700 border border-zinc-600 text-white" />
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container">
+      <a class="navbar-brand" href="#">
+        📊 <strong>Dashboard Jasa Developer</strong>
+      </a>
+      <div class="collapse navbar-collapse">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link active" href="#">Dashboard</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Preview GM</a>
+          </li>
+        </ul>
       </div>
+    </div>
+  </nav>
 
-      <div>
-        <label class="block text-sm mb-1">Jenis Project</label>
-        <select name="jenis" required class="w-full p-2 rounded bg-zinc-700 border border-zinc-600 text-white">
-          <option value="SAMP Gamemode">SAMP Gamemode</option>
-          <option value="Mapping">Mapping</option>
-          <option value="Web UI/UX">Web UI/UX</option>
-          <option value="Full Website">Full Website</option>
-        </select>
+  <div class="container text-center py-5 fade-in">
+    <span class="badge-pro">👨‍💻 Developer Profesional</span>
+    <h2 class="mb-4">⚒️ Jasa Developer SA-MP & UI Website</h2>
+    <p class="mb-5">Kami siap membantu kamu membangun server dan tampilan website yang menarik, stabil, dan bisa custom sesuai keinginanmu!</p>
+
+    <div class="row justify-content-center g-4">
+      <div class="col-md-4">
+        <div class="bg-dark p-4 rounded pricing-card">
+          <h5 class="text-info">Paket Developer 1 Minggu</h5>
+          <p>Bebas update fitur selama seminggu.<br>Cocok buat test sistem & rilis awal.</p>
+          <h4>💰 Rp 100.000</h4>
+          <ul class="list-unstyled">
+            <li>✔️ Update harian 3–4×</li>
+            <li>✔️ Fast response support</li>
+            <li>✔️ Revisi tanpa batas</li>
+          </ul>
+          <a href="#" class="btn btn-primary mt-2">Pesan Sekarang</a>
+        </div>
       </div>
-
-      <div>
-        <label class="block text-sm mb-1">Deskripsi Singkat</label>
-        <textarea name="deskripsi" rows="4" required class="w-full p-2 rounded bg-zinc-700 border border-zinc-600 text-white"></textarea>
+      <div class="col-md-4">
+        <div class="bg-dark p-4 rounded pricing-card">
+          <h5 class="text-info">Paket Developer 1 Bulan</h5>
+          <p>Full service update & fitur bebas custom selama 30 hari.</p>
+          <h4>💰 Rp 300.000</h4>
+          <ul class="list-unstyled">
+            <li>✔️ Update harian 3–4×</li>
+            <li>✔️ Unlimited fitur & revisi</li>
+            <li>✔️ Prioritas antrian task</li>
+          </ul>
+          <a href="#" class="btn btn-primary mt-2">Pesan Sekarang</a>
+        </div>
       </div>
-
-      <div>
-        <label class="block text-sm mb-1">Discord ID / Kontak</label>
-        <input type="text" name="kontak" required placeholder="Contoh: user#1234" class="w-full p-2 rounded bg-zinc-700 border border-zinc-600 text-white" />
+      <div class="col-md-4">
+        <div class="bg-dark p-4 rounded pricing-card">
+          <h5 class="text-info">Paket Harian / Fast Task</h5>
+          <p>Untuk kamu yang hanya butuh task cepat seperti perbaikan, optimasi.</p>
+          <h4>💰 Rp 30.000 / task</h4>
+          <ul class="list-unstyled">
+            <li>✔️ 1x pengerjaan cepat</li>
+            <li>✔️ Include revisi minor</li>
+            <li>✔️ Hasil bersih & rapi</li>
+          </ul>
+          <a href="#" class="btn btn-primary mt-2">Pesan Sekarang</a>
+        </div>
       </div>
+    </div>
 
-      <button type="submit" class="w-full bg-blue-500 hover:bg-blue-600 transition p-2 rounded font-semibold text-white">Kirim Pemesanan 🚀</button>
-    </form>
-  </main>
+    <h4 class="mt-5 fade-in">🗣️ Apa Kata Klien Kami?</h4>
+    <div class="row justify-content-center">
+      <div class="col-md-4 testimoni">
+        <p>Awalnya ragu, tapi ternyata developernya cepet tanggap banget. Request gua jam 1 pagi, besok pagi udah jadi. Respect!</p>
+      </div>
+      <div class="col-md-4 testimoni">
+        <p>Desain web-nya simpel tapi elegan. Cocok buat forum komunitas gua. Gak nyesel order di sini.</p>
+      </div>
+      <div class="col-md-4 testimoni">
+        <p>Keren sih, tiap revisi gua langsung direspons. Task-nya juga rapi. Dikasih bonus plugin juga.</p>
+      </div>
+    </div>
+  </div>
 
-  <footer class="mt-10 text-center text-xs text-gray-400">
-    &copy; 2025 MarshDev. Build with ❤️ in Indonesia.
-  </footer>
+  <script>
+    // Fade-in animation on scroll
+    const faders = document.querySelectorAll('.fade-in');
+
+    const appearOptions = {
+      threshold: 0.2,
+      rootMargin: "0px 0px -50px 0px"
+    };
+
+    const appearOnScroll = new IntersectionObserver(function (entries, observer) {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
+        entry.target.classList.add("appear");
+        observer.unobserve(entry.target);
+      });
+    }, appearOptions);
+
+    faders.forEach(fader => {
+      appearOnScroll.observe(fader);
+    });
+  </script>
 </body>
+
 </html>
