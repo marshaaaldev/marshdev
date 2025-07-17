@@ -125,3 +125,24 @@ a:hover {
     margin-bottom: 20px;
   }
 }
+
+.typing-effect {
+  overflow: hidden;
+  border-right: 2px solid #fff;
+  white-space: nowrap;
+  margin: 0 auto;
+  letter-spacing: 2px;
+  animation: typing 3.5s steps(40, end), blink .75s step-end infinite;
+  width: max-content;
+  font-family: 'Courier New', monospace;
+  color: #fff;
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+@keyframes blink {
+  50% { border-color: transparent }
+}
