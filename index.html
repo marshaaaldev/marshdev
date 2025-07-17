@@ -1,43 +1,129 @@
-
 <!DOCTYPE html>
 <html lang="id">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>MarshalDev | Portofolio</title>
-  <link rel="stylesheet" href="style.css" />
-  <script src="https://unpkg.com/scrollreveal"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>MarshDev - Forum & Skill</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #0d111d;
+      color: #f0f4ff;
+    }
+
+    header {
+      background-color: #1c1f2e;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    header h1 {
+      font-size: 1.5rem;
+      margin: 0;
+    }
+
+    nav {
+      display: flex;
+      gap: 1rem;
+      margin-top: 0.5rem;
+    }
+
+    nav a {
+      color: #f0f4ff;
+      text-decoration: none;
+      font-weight: bold;
+      padding: 0.6rem 1.2rem;
+      background-color: #2e344e;
+      border-radius: 10px;
+      border: 1px solid #3c4260;
+      transition: background-color 0.3s, transform 0.2s;
+    }
+
+    nav a:hover {
+      background-color: #7e6bc4;
+      transform: translateY(-2px);
+    }
+
+    section {
+      padding: 2rem;
+    }
+
+    h2 {
+      color: #a88add;
+    }
+
+    .skill-list, .gm-list, .project-banner {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+
+    .skill-item, .gm-item, .banner {
+      background-color: #1c1f2e;
+      padding: 1rem;
+      border-radius: 10px;
+      flex: 1 1 120px;
+      text-align: center;
+      border: 1px solid #2e2e44;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+      background-color: #1c1f2e;
+      margin-top: 2rem;
+      font-size: 0.9rem;
+    }
+  </style>
 </head>
-<body class="dark-theme">
+<body>
   <header>
-    <nav class="navbar">
-      <h1 class="logo">MarshalDev</h1>
-      <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="dashboard.html">Dashboard</a></li>
-        <li><a href="jual-gm.html">Sell GM & Setup</a></li>
-      </ul>
+    <h1>🛠️ MarshDev Forum & Skill</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="dashboard.html">Dashboard</a>
+      <a href="jual-gm.html">Sell GM & Hosting</a>
     </nav>
   </header>
 
-  <section class="hero">
-    <div class="hero-text">
-      <h2>Halo Gua Andra</h2>
-      <p>Nama gue Andra. Gue bukan sekadar developer, tapi partner yang bantu lo wujudkan ide jadi realita digital. Dari sistem forum SA-MP, fitur dynamic, textdraw, hingga desain web profesional — setiap project adalah tantangan yang gue hadapi dengan totalitas.</p>
+  <section>
+    <h2>Selamat Datang di MarshDev!</h2>
+    <p>Tempatnya para developer, scripter, dan pejuang server berkumpul! Di sini kamu bisa lihat skill, jasa, dan preview karya developer lokal. Santai tapi produktif.</p>
+  </section>
+
+  <section>
+    <h2>⚙️ Skill Aktif</h2>
+    <div class="skill-list">
+      <div class="skill-item">C++</div>
+      <div class="skill-item">JavaScript</div>
+      <div class="skill-item">Ruby</div>
+      <div class="skill-item">Python</div>
+      <div class="skill-item">Node.js</div>
     </div>
   </section>
 
-  <section class="projects">
-    <h2 class="section-title">Project Aesthetic Luminar</h2>
-    <div class="project-card">
-      <img src="https://raw.githubusercontent.com/marshaaaldev/marshdev/main/file_00000000901061f7b28958c7bd95b3d7.png" alt="Project Aesthetic Luminar" class="project-image">
-      <p class="project-description">Forum dengan desain aesthetic Luminar, bergaya SA-MP klasik namun modern. Tersedia fitur UCP, admin info, rules, dan UI stylish.</p>
+  
+  <section>
+    <h2>🌀 Project Aesthetic Luminar</h2>
+    <div class="project-banner">
+      <div class="banner">Banner 1</div>
+      <div class="banner">Banner 2</div>
     </div>
   </section>
 
-  <script>
-    ScrollReveal().reveal('.hero-text', { delay: 200, origin: 'left', distance: '50px' });
-    ScrollReveal().reveal('.project-card', { delay: 400, origin: 'bottom', distance: '50px' });
-  </script>
+  <section style="text-align: center;">
+    <p>Punya project? Butuh developer?</p>
+    <a href="jasa-developer.html" style="display: inline-block; background-color: #a88add; color: #0d111d; padding: 0.75rem 1.5rem; border-radius: 10px; text-decoration: none; font-weight: bold; margin-top: 1rem;">Cek Jasa Developer Sekarang 🚀</a>
+  </section>
+
+  <footer>
+    © 2025 MarshDev. Build with ❤️ in Indonesia.
+  </footer>
 </body>
 </html>
