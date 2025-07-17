@@ -1,0 +1,80 @@
+.testimonial-hero {
+  background: linear-gradient(135deg, #1a1a2e, #0d111d);
+  padding: 60px 20px;
+  text-align: center;
+  color: #fff;
+  border-bottom: 1px solid #a88add33;
+}
+
+.testimonial-hero .quote p {
+  font-size: 1.8rem;
+  color: #a88add;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.testimonial-hero .quote span {
+  font-size: 1rem;
+  color: #ccc;
+  font-style: italic;
+}
+
+.testimonial-section {
+  background-color: #0d111d;
+  padding: 60px 20px;
+  color: #fff;
+  text-align: center;
+}
+
+.testimonial-section h2 {
+  font-size: 2.2rem;
+  color: #a88add;
+  margin-bottom: 40px;
+}
+
+.testimonial-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+}
+
+.testimonial-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(168, 138, 221, 0.15);
+  backdrop-filter: blur(10px);
+  border-radius: 15px;
+  padding: 20px;
+  max-width: 300px;
+  box-shadow: 0 0 15px rgba(168, 138, 221, 0.08);
+  transition: 0.3s;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 25px #a88add55;
+}
+
+.testimonial-card img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 15px;
+}
+
+.testimonial-card h3 {
+  color: #a88add;
+  font-size: 1.1rem;
+}
+
+.testimonial-card p {
+  font-size: 0.95rem;
+  color: #ccc;
+}
+
+.stars {
+  margin-top: 10px;
+  color: gold;
+  font-size: 1.2rem;
+}
