@@ -110,6 +110,15 @@ a:hover {
   color: #ffffff;
 }
 
+/* ===== Project Image Style ===== */
+.project-image {
+  width: 100%;
+  max-width: 100%;
+  border-radius: 12px;
+  margin-top: 1rem;
+  display: block;
+}
+
 /* ===== Responsive ===== */
 @media (max-width: 768px) {
   .paket {
