@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Galeri Marshal</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <title>Galeri Aesthic Luminar</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
   <style>
     body {
       margin: 0;
@@ -15,25 +15,26 @@
     }
 
     .hero {
+      padding: 60px 20px 20px;
       text-align: center;
-      padding: 60px 20px 30px;
     }
 
     .hero h1 {
       font-size: 3rem;
       color: #a88add;
-      margin-bottom: 15px;
+      margin-bottom: 20px;
     }
 
     .hero p {
-      font-size: 1.1rem;
+      font-size: 1.2rem;
       color: #c3c8d6;
       max-width: 700px;
       margin: auto;
+      line-height: 1.6;
     }
 
     .container {
-      padding: 20px;
+      padding: 40px 20px;
       max-width: 1200px;
       margin: auto;
     }
@@ -41,53 +42,39 @@
     .grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 25px;
-      margin-top: 40px;
+      gap: 20px;
     }
 
     .card {
-      background-color: #111623;
-      border-radius: 12px;
+      background: linear-gradient(145deg, #13182b, #0a0e1a);
+      border: 1px solid #a88add33;
+      border-radius: 14px;
       overflow: hidden;
-      box-shadow: 0 4px 20px rgba(168, 138, 221, 0.15);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-      opacity: 0;
-      transform: translateY(20px);
-      animation: fadeInUp 0.6s forwards;
-    }
-
-    .card:nth-child(2) { animation-delay: 0.2s; }
-    .card:nth-child(3) { animation-delay: 0.4s; }
-    .card:nth-child(4) { animation-delay: 0.6s; }
-    .card:nth-child(5) { animation-delay: 0.8s; }
-
-    @keyframes fadeInUp {
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
+      box-shadow: 0 5px 25px rgba(168, 138, 221, 0.1);
+      transition: transform 0.3s, box-shadow 0.3s;
     }
 
     .card:hover {
-      transform: scale(1.03);
-      box-shadow: 0 0 15px #a88add55;
+      transform: translateY(-5px) scale(1.02);
+      box-shadow: 0 0 15px #a88add66;
     }
 
     .card img {
       width: 100%;
+      height: auto;
       display: block;
     }
 
     .caption {
-      padding: 15px;
+      padding: 16px;
       text-align: center;
       font-size: 1rem;
       color: #c3c8d6;
     }
 
-    @media screen and (max-width: 600px) {
+    @media (max-width: 480px) {
       .hero h1 {
-        font-size: 2.2rem;
+        font-size: 2rem;
       }
 
       .hero p {
@@ -97,32 +84,35 @@
   </style>
 </head>
 <body>
-  <section class="hero">
-    <h1>Aesthic Luminar</h1>
-    <p>Aesthic Luminar hadir bukan sekadar tampilan. Ini tentang kesan pertama yang bikin player betah, komunitas solid, dan identitas server yang ngena. gua bawa semua itu ke realita.</p>
-  </section>
+  <div class="hero">
+    <h1>Galeri Aesthic Luminar</h1>
+    <p>
+      Selamat datang di galeri eksklusif <strong>Aesthic Luminar</strong> — di mana desain bukan sekadar visual, tapi identitas.  
+      Semua detail forum, fitur, dan suasana server kami rancang dengan totalitas dan nilai seni tinggi.
+    </p>
+  </div>
 
   <div class="container">
     <div class="grid">
       <div class="card">
         <img src="https://raw.githubusercontent.com/marshaaaldev/marshdev/main/sa-mp-576.png" alt="Forum Luminar 1">
-        <div class="caption">Job job RP yang rapi dan tertata, bikin server lo punya arah yang jelas.</div>
+        <div class="caption">Job menarik dan komunitas aktif, bikin Aesthic Luminar beda dari yang lain.</div>
       </div>
       <div class="card">
         <img src="https://raw.githubusercontent.com/marshaaaldev/marshdev/main/sa-mp-495.png" alt="Forum Luminar 2">
-        <div class="caption">Tampilan clean, elegan dan sangat sederha membuat player betah, saat ini Aesthic sudah 150+ Player</div>
+        <div class="caption">Clean & profesional — bukan sekadar tempat, tapi wajah server Aesthic Luminar.</div>
       </div>
       <div class="card">
         <img src="https://raw.githubusercontent.com/marshaaaldev/marshdev/main/sa-mp-597.png" alt="Forum Luminar 3">
-        <div class="caption">Bertemakan oldschool mengambil khas dari server old dengan versi new</div>
+        <div class="caption">On IC rame 150+ player, tiap detail gua tata demi suasana maksimal.</div>
       </div>
       <div class="card">
         <img src="https://raw.githubusercontent.com/marshaaaldev/marshdev/main/sa-mp-606.png" alt="Forum Luminar 4">
-        <div class="caption">Gue rancang semua dari sistem, vibe, sampai UX. Nggak ada yang asal-asalan.</div>
+        <div class="caption">Marshaldev hadirkan vibe total — dari fitur, textdraw, hingga layout komunitas.</div>
       </div>
       <div class="card">
         <img src="https://raw.githubusercontent.com/marshaaaldev/marshdev/main/file_00000000901061f7b28958c7bd95b3d7.png" alt="Forum Luminar 5">
-        <div class="caption">Dengan forum yang sangat elegan, sudah terdaftar 20rb player disini..</div>
+        <div class="caption">Setiap baris kode lahir dari passion untuk bikin Aesthic Luminar jadi pengalaman tak terlupakan.</div>
       </div>
     </div>
   </div>
