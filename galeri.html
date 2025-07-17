@@ -1,1 +1,84 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Galeri Marshal</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #0d111d;
+      font-family: 'Poppins', sans-serif;
+      color: #fff;
+    }
 
+    .container {
+      padding: 40px 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 2.5rem;
+      color: #a88add;
+      margin-bottom: 40px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background-color: #111623;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 20px rgba(168, 138, 221, 0.15);
+      transition: 0.3s;
+    }
+
+    .card:hover {
+      transform: scale(1.03);
+      box-shadow: 0 0 15px #a88add55;
+    }
+
+    .card img {
+      width: 100%;
+      display: block;
+    }
+
+    .caption {
+      padding: 15px;
+      text-align: center;
+      font-size: 1rem;
+      color: #c3c8d6;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Galeri Aesthetic Marshal</h1>
+    <div class="grid">
+      <div class="card">
+        <img src="https://raw.githubusercontent.com/marshaaaldev/marshdev/main/sa-mp-576.png" alt="Forum Luminar 1">
+        <div class="caption">Banyak job menarik di Aesthic Luminar.</div>
+      </div>
+      <div class="card">
+        <img src="https://raw.githubusercontent.com/marshaaaldev/marshdev/main/sa-mp-495.png" alt="Forum Luminar 2">
+        <div class="caption">Tampilan clean & profesional bukan sekadar tempat, tapi identitas server Aesthic Luminar.</div>
+      </div>
+      <div class="card">
+        <img src="https://raw.githubusercontent.com/marshaaaldev/marshdev/main/sa-mp-597.png" alt="Forum Luminar 3">
+        <div class="caption">Setiap pixel punya makna dan setiap komunitas samp beragam, player rame dengan on ic 150.</div>
+      </div>
+      <div class="card">
+        <img src="https://raw.githubusercontent.com/marshaaaldev/marshdev/main/sa-mp-606.png" alt="Forum Luminar 4">
+        <div class="caption">Marshaldev: dari fitur, textdraw,sampai vibe semua gua rancang totalitas.</div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
