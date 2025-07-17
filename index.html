@@ -1,96 +1,43 @@
-<!DOCTYPE html><html lang="id">
+
+<!DOCTYPE html>
+<html lang="id">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>MarshDev - Forum & Skill</title>
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-  <style>
-    body {
-      background-color: #0d111d;
-      color: white;
-      font-family: 'Segoe UI', sans-serif;
-    }
-    .btn-glow {
-      background-color: #7e6bc4;
-      color: white;
-    }
-    .btn-glow:hover {
-      background-color: #a88add;
-      transform: scale(1.05);
-    }
-    .menu-box {
-      background-color: #1a1f2e;
-      border: 1px solid #2f3a5e;
-      border-radius: 0.75rem;
-      padding: 1rem 2rem;
-      transition: 0.3s;
-    }
-    .menu-box:hover {
-      background-color: #2b3350;
-      transform: translateY(-2px);
-    }
-  </style>
+  <title>MarshalDev | Portofolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://unpkg.com/scrollreveal"></script>
 </head>
-<body class="px-4 sm:px-10">
-  <header class="py-6 text-center">
-    <h1 class="text-3xl font-bold text-blue-300 mb-2" data-aos="fade-down">🛠️ MarshDev Forum & Skill</h1>
-    <div class="flex justify-center flex-wrap gap-4 mt-4" data-aos="fade-down" data-aos-delay="100">
-      <a href="index.html" class="menu-box text-white font-medium">Home</a>
-      <a href="dashboard.html" class="menu-box text-white font-medium">Dashboard</a>
-      <!-- <a href="jual-gm.html" class="menu-box text-white font-medium">Jual GM & Setup</a> -->
-    </div>
+<body class="dark-theme">
+  <header>
+    <nav class="navbar">
+      <h1 class="logo">MarshalDev</h1>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="dashboard.html">Dashboard</a></li>
+        <li><a href="jual-gm.html">Sell GM & Setup</a></li>
+      </ul>
+    </nav>
   </header>
 
-  <section class="text-center mt-10" data-aos="fade-up">
-    <h2 class="text-2xl font-semibold text-purple-300 mb-3">Selamat Datang di MarshDev!</h2>
-    <p class="text-blue-100 max-w-xl mx-auto">
-      Tempatnya para developer, scripter, dan pejuang server berkumpul! Di sini kamu bisa lihat skill, jasa, dan preview karya developer lokal. Santai tapi produktif.
-    </p>
-  </section>
-
-  <!-- Skill Section -->
-  <section class="mt-12" data-aos="fade-up">
-    <h2 class="text-md font-semibold mb-3 text-center text-white">⚙️ Skill Aktif</h2>
-    <div class="grid grid-cols-3 sm:grid-cols-5 gap-5 place-items-center mb-8">
-      <div class="flex flex-col items-center">
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" class="w-10 h-10" />
-        <span class="text-xs mt-1 text-white">C++</span>
-      </div>
-      <div class="flex flex-col items-center">
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" class="w-10 h-10" />
-        <span class="text-xs mt-1 text-white">JavaScript</span>
-      </div>
-      <div class="flex flex-col items-center">
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/ruby/ruby-original.svg" class="w-10 h-10" />
-        <span class="text-xs mt-1 text-white">Ruby</span>
-      </div>
-      <div class="flex flex-col items-center">
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" class="w-10 h-10" />
-        <span class="text-xs mt-1 text-white">Python</span>
-      </div>
-      <div class="flex flex-col items-center">
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" class="w-10 h-10" />
-        <span class="text-xs mt-1 text-white">Node.js</span>
-      </div>
+  <section class="hero">
+    <div class="hero-text">
+      <h2>Halo Gua Andra</h2>
+      <p>Nama gue Andra. Gue bukan sekadar developer, tapi partner yang bantu lo wujudkan ide jadi realita digital. Dari sistem forum SA-MP, fitur dynamic, textdraw, hingga desain web profesional — setiap project adalah tantangan yang gue hadapi dengan totalitas.</p>
     </div>
   </section>
 
-  <!-- Call to Action -->
-  <div class="text-center mt-6" data-aos="fade-up">
-    <p class="mb-2 text-blue-200 font-medium">Punya project? Butuh developer?</p>
-    <a href="jasa-developer.html" class="btn-glow font-semibold px-5 py-2 rounded-full transition duration-300 ease-in-out shadow-md">
-      Cek Jasa Developer Sekarang 🚀
-    </a>
-  </div>
+  <section class="projects">
+    <h2 class="section-title">Project Aesthetic Luminar</h2>
+    <div class="project-card">
+      <img src="https://raw.githubusercontent.com/marshaaaldev/marshdev/main/file_00000000901061f7b28958c7bd95b3d7.png" alt="Project Aesthetic Luminar" class="project-image">
+      <p class="project-description">Forum dengan desain aesthetic Luminar, bergaya SA-MP klasik namun modern. Tersedia fitur UCP, admin info, rules, dan UI stylish.</p>
+    </div>
+  </section>
 
-  <footer class="text-center text-sm text-gray-400 mt-12 py-6">
-    © 2025 MarshDev. Build with ❤️ in Indonesia.
-  </footer>
-
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
-    AOS.init();
+    ScrollReveal().reveal('.hero-text', { delay: 200, origin: 'left', distance: '50px' });
+    ScrollReveal().reveal('.project-card', { delay: 400, origin: 'bottom', distance: '50px' });
   </script>
 </body>
 </html>
