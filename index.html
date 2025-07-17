@@ -7,120 +7,157 @@
   <style>
     body {
       margin: 0;
-      padding: 0;
       font-family: 'Segoe UI', sans-serif;
       background-color: #0d111d;
-      color: #f0f4ff;
-    }
-
-    header {
-      background-color: #1c1f2e;
-      padding: 1rem 2rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
-    }
-
-    header h1 {
-      font-size: 1.5rem;
-      margin: 0;
+      color: #fff;
     }
 
     nav {
+      background-color: #161b2d;
       display: flex;
-      gap: 1rem;
-      margin-top: 0.5rem;
+      justify-content: center;
+      gap: 20px;
+      padding: 1rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.3);
     }
 
     nav a {
-      color: #f0f4ff;
+      color: white;
       text-decoration: none;
-      font-weight: bold;
-      padding: 0.6rem 1.2rem;
-      background-color: #2e344e;
-      border-radius: 10px;
-      border: 1px solid #3c4260;
-      transition: background-color 0.3s, transform 0.2s;
+      padding: 8px 16px;
+      border: 1px solid #2d3756;
+      border-radius: 8px;
+      background-color: #1c2238;
+      transition: 0.3s ease;
     }
 
     nav a:hover {
-      background-color: #7e6bc4;
-      transform: translateY(-2px);
+      background-color: #2e3658;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+
+    h1 {
+      font-size: 2rem;
+      text-align: center;
+      margin-bottom: 1rem;
     }
 
     section {
-      padding: 2rem;
+      margin-bottom: 2rem;
     }
 
-    h2 {
-      color: #a88add;
-    }
-
-    .skill-list, .gm-list, .project-banner {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1rem;
+    .skill-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+      gap: 20px;
       margin-top: 1rem;
     }
 
-    .skill-item, .gm-item, .banner {
-      background-color: #1c1f2e;
-      padding: 1rem;
-      border-radius: 10px;
-      flex: 1 1 120px;
+    .skill-item {
       text-align: center;
-      border: 1px solid #2e2e44;
+      background-color: #1c2238;
+      border-radius: 12px;
+      padding: 1rem;
+      box-shadow: 0 0 10px rgba(255,255,255,0.05);
+      transition: transform 0.3s ease;
+    }
+
+    .skill-item:hover {
+      transform: translateY(-5px);
+      background-color: #242b45;
+    }
+
+    .skill-item img {
+      width: 40px;
+      margin-bottom: 0.5rem;
+    }
+
+    .project-gallery {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .project-gallery img {
+      width: 200px;
+      border-radius: 12px;
+      transition: 0.3s ease;
+    }
+
+    .project-gallery img:hover {
+      transform: scale(1.05);
     }
 
     footer {
       text-align: center;
       padding: 2rem;
-      background-color: #1c1f2e;
-      margin-top: 2rem;
+      background-color: #161b2d;
+      color: #ccc;
       font-size: 0.9rem;
     }
   </style>
 </head>
 <body>
-  <header>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="dashboard.html">Dashboard</a>
+    <a href="jual-gm.html">Sell GM & Hosting</a>
+  </nav>
+
+  <div class="container">
     <h1>🛠️ MarshDev Forum & Skill</h1>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="dashboard.html">Dashboard</a>
-      <a href="jual-gm.html">Sell GM & Hosting</a>
-    </nav>
-  </header>
 
-  <section>
-    <h2>Selamat Datang di MarshDev!</h2>
-    <p>Tempatnya para developer, scripter, dan pejuang server berkumpul! Di sini kamu bisa lihat skill, jasa, dan preview karya developer lokal. Santai tapi produktif.</p>
-  </section>
+    <section>
+      <h2>Selamat Datang di MarshDev!</h2>
+      <p>Tempatnya para developer, scripter, dan pejuang server berkumpul! Di sini kamu bisa lihat skill, jasa, dan preview karya developer lokal. Santai tapi produktif.</p>
+    </section>
 
-  <section>
-    <h2>⚙️ Skill Aktif</h2>
-    <div class="skill-list">
-      <div class="skill-item">C++</div>
-      <div class="skill-item">JavaScript</div>
-      <div class="skill-item">Ruby</div>
-      <div class="skill-item">Python</div>
-      <div class="skill-item">Node.js</div>
-    </div>
-  </section>
+    <section>
+      <h2>⚙️ Skill Aktif</h2>
+      <div class="skill-grid">
+        <div class="skill-item">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" alt="C++">
+          <p>C++</p>
+        </div>
+        <div class="skill-item">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript">
+          <p>JavaScript</p>
+        </div>
+        <div class="skill-item">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/ruby/ruby-original.svg" alt="Ruby">
+          <p>Ruby</p>
+        </div>
+        <div class="skill-item">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python">
+          <p>Python</p>
+        </div>
+        <div class="skill-item">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js">
+          <p>Node.js</p>
+        </div>
+      </div>
+    </section>
 
-  
-  <section>
-    <h2>🌀 Project Aesthetic Luminar</h2>
-    <div class="project-banner">
-      <div class="banner">Banner 1</div>
-      <div class="banner">Banner 2</div>
-    </div>
-  </section>
+    <section>
+      <h2>🌀 Project Aesthetic Luminar</h2>
+      <div class="project-gallery">
+        <img src="https://raw.githubusercontent.com/sh6wm3/Portofolioo/main/gambar/forum1.jpg" alt="Project Luminar 1">
+        <img src="https://raw.githubusercontent.com/sh6wm3/Portofolioo/main/gambar/forum2.jpg" alt="Project Luminar 2">
+      </div>
+    </section>
 
-  <section style="text-align: center;">
-    <p>Punya project? Butuh developer?</p>
-    <a href="jasa-developer.html" style="display: inline-block; background-color: #a88add; color: #0d111d; padding: 0.75rem 1.5rem; border-radius: 10px; text-decoration: none; font-weight: bold; margin-top: 1rem;">Cek Jasa Developer Sekarang 🚀</a>
-  </section>
+    <section style="text-align: center; margin-top: 3rem;">
+      <p>Punya project? Butuh developer?</p>
+      <a href="jasa-developer.html" style="display:inline-block; margin-top: 1rem; background-color:#3b82f6; color:white; padding:10px 20px; border-radius:8px; text-decoration:none;">Cek Jasa Developer Sekarang 🚀</a>
+    </section>
+  </div>
 
   <footer>
     © 2025 MarshDev. Build with ❤️ in Indonesia.
