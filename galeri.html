@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Galeri Marshal</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
   <style>
     body {
       margin: 0;
@@ -13,23 +14,35 @@
       color: #fff;
     }
 
-    .container {
-      padding: 40px 20px;
-      max-width: 1200px;
+    .hero {
+      text-align: center;
+      padding: 60px 20px 30px;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      color: #a88add;
+      margin-bottom: 15px;
+    }
+
+    .hero p {
+      font-size: 1.1rem;
+      color: #c3c8d6;
+      max-width: 700px;
       margin: auto;
     }
 
-    h1 {
-      text-align: center;
-      font-size: 2.5rem;
-      color: #a88add;
-      margin-bottom: 40px;
+    .container {
+      padding: 20px;
+      max-width: 1200px;
+      margin: auto;
     }
 
     .grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 20px;
+      gap: 25px;
+      margin-top: 40px;
     }
 
     .card {
@@ -37,7 +50,22 @@
       border-radius: 12px;
       overflow: hidden;
       box-shadow: 0 4px 20px rgba(168, 138, 221, 0.15);
-      transition: 0.3s;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeInUp 0.6s forwards;
+    }
+
+    .card:nth-child(2) { animation-delay: 0.2s; }
+    .card:nth-child(3) { animation-delay: 0.4s; }
+    .card:nth-child(4) { animation-delay: 0.6s; }
+    .card:nth-child(5) { animation-delay: 0.8s; }
+
+    @keyframes fadeInUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
 
     .card:hover {
@@ -56,27 +84,45 @@
       font-size: 1rem;
       color: #c3c8d6;
     }
+
+    @media screen and (max-width: 600px) {
+      .hero h1 {
+        font-size: 2.2rem;
+      }
+
+      .hero p {
+        font-size: 1rem;
+      }
+    }
   </style>
 </head>
 <body>
+  <section class="hero">
+    <h1>Aesthic Luminar</h1>
+    <p>Aesthic Luminar hadir bukan sekadar tampilan. Ini tentang kesan pertama yang bikin player betah, komunitas solid, dan identitas server yang ngena. gua bawa semua itu ke realita.</p>
+  </section>
+
   <div class="container">
-    <h1>Galeri Aesthetic Marshal</h1>
     <div class="grid">
       <div class="card">
         <img src="https://raw.githubusercontent.com/marshaaaldev/marshdev/main/sa-mp-576.png" alt="Forum Luminar 1">
-        <div class="caption">Banyak job menarik di Aesthic Luminar.</div>
+        <div class="caption">Job job RP yang rapi dan tertata, bikin server lo punya arah yang jelas.</div>
       </div>
       <div class="card">
         <img src="https://raw.githubusercontent.com/marshaaaldev/marshdev/main/sa-mp-495.png" alt="Forum Luminar 2">
-        <div class="caption">Tampilan clean & profesional bukan sekadar tempat, tapi identitas server Aesthic Luminar.</div>
+        <div class="caption">Tampilan clean, elegan dan sangat sederha membuat player betah, saat ini Aesthic sudah 150+ Player</div>
       </div>
       <div class="card">
         <img src="https://raw.githubusercontent.com/marshaaaldev/marshdev/main/sa-mp-597.png" alt="Forum Luminar 3">
-        <div class="caption">Setiap pixel punya makna dan setiap komunitas samp beragam, player rame dengan on ic 150.</div>
+        <div class="caption">Bertemakan oldschool mengambil khas dari server old dengan versi new</div>
       </div>
       <div class="card">
         <img src="https://raw.githubusercontent.com/marshaaaldev/marshdev/main/sa-mp-606.png" alt="Forum Luminar 4">
-        <div class="caption">Marshaldev: dari fitur, textdraw,sampai vibe semua gua rancang totalitas.</div>
+        <div class="caption">Gue rancang semua dari sistem, vibe, sampai UX. Nggak ada yang asal-asalan.</div>
+      </div>
+      <div class="card">
+        <img src="https://raw.githubusercontent.com/marshaaaldev/marshdev/main/file_00000000901061f7b28958c7bd95b3d7.png" alt="Forum Luminar 5">
+        <div class="caption">Dengan forum yang sangat elegan, sudah terdaftar 20rb player disini..</div>
       </div>
     </div>
   </div>
