@@ -1,0 +1,38 @@
+/* dashboard.css - inspired by Digitok style */
+
+body { margin: 0; padding: 0; font-family: 'Segoe UI', sans-serif; background-color: #000000; color: #e1faff; }
+
+.navbar { display: flex; justify-content: space-between; align-items: center; background-color: #0a0a0a; padding: 15px 20px; position: sticky; top: 0; z-index: 999; box-shadow: 0 0 20px rgba(0, 245, 255, 0.08); }
+
+.navbar .brand { font-weight: bold; font-size: 1.2rem; color: #00e4ff; }
+
+.navbar .menu-toggle { font-size: 26px; color: #00e4ff; cursor: pointer; }
+
+.section { padding: 50px 20px; text-align: center; }
+
+.section span { background-color: #03232e; padding: 6px 14px; border-radius: 20px; color: #00f5ff; font-size: 14px; font-weight: 600; display: inline-block; }
+
+.section h1 { font-size: 2.4rem; margin: 20px 0 10px; background: linear-gradient(90deg, #00f5ff, #00cfff); -webkit-background-clip: text; color: transparent; }
+
+.section p { max-width: 540px; margin: 0 auto; color: #b8cdd2; line-height: 1.6; }
+
+.feature-grid { display: flex; flex-wrap: wrap; justify-content: center; gap: 30px; margin-top: 40px; }
+
+.feature-box { background-color: #0f1b24; padding: 20px; border-radius: 14px; width: 280px; text-align: left; box-shadow: 0 0 20px rgba(0, 255, 255, 0.04); transition: transform 0.3s ease, box-shadow 0.3s ease; }
+
+.feature-box:hover { transform: translateY(-6px); box-shadow: 0 0 15px rgba(0, 255, 255, 0.2); }
+
+.feature-box h4 { margin-bottom: 10px; color: #00e4ff; }
+
+.feature-box p { font-size: 0.95rem; color: #c7e5ea; }
+
+.btn-primary { background: linear-gradient(90deg, #00f5ff, #00cfff); color: #000; padding: 12px 24px; border-radius: 30px; text-decoration: none; font-weight: bold; box-shadow: 0 0 15px rgba(0, 245, 255, 0.3); display: inline-block; margin-top: 30px; transition: all 0.3s ease; }
+
+.btn-primary:hover { background: linear-gradient(90deg, #00cfff, #00f5ff); color: #000; box-shadow: 0 0 20px rgba(0, 255, 255, 0.4); }
+
+footer { text-align: center; margin-top: 60px; padding: 20px; font-size: 14px; background-color: #0a0a0a; color: #7db9c4; }
+
+/* Tambahan responsive */ @media (max-width: 768px) { .feature-grid { flex-direction: column; align-items: center; }
+
+.feature-box { width: 90%; } }
+
