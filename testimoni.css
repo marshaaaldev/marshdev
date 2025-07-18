@@ -1,0 +1,60 @@
+/* testimoni.css */
+body {
+  background-color: #000000;
+  color: #d6faff;
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: #7ecfff;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+a:hover {
+  color: #ffffff;
+}
+
+h1, h2, h3 {
+  color: #4fedff;
+}
+
+.container {
+  max-width: 900px;
+  margin: auto;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.card {
+  background-color: #0e0e0e;
+  border: 1px solid #2de4ff40;
+  border-radius: 16px;
+  padding: 20px;
+  margin-top: 30px;
+  color: #fff7c2;
+  font-size: 1.1rem;
+  box-shadow: 0 0 12px rgba(0, 255, 255, 0.1);
+}
+
+.card span {
+  display: block;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.card span::before {
+  content: '✨ ';
+  color: #4fedff;
+}
+
+footer {
+  margin-top: 60px;
+  padding: 20px;
+  text-align: center;
+  font-size: 14px;
+  color: #888;
+  background-color: #0d0d0d;
+}
