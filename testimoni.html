@@ -4,14 +4,128 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Testimoni Client | MarshalDev</title>
-  <link rel="stylesheet" href="testimoni.css?v=2">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background-color: #000;
+      color: #ffffff;
+    }
+
+    header {
+      background-color: #000;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #1c1c1c;
+    }
+
+    header a {
+      color: #3ee8ff;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .hero {
+      background-color: #000;
+      padding: 3rem 2rem;
+      text-align: center;
+      border-bottom: 2px solid #1a1a1a;
+    }
+
+    .hero h1 {
+      font-size: 2.6rem;
+      font-weight: 700;
+      background: linear-gradient(90deg, #00f0ff, #24caff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 1rem;
+    }
+
+    .hero p {
+      font-size: 1.1rem;
+      color: #ccc;
+      margin: 0 auto;
+      max-width: 600px;
+    }
+
+    .highlight-box {
+      margin-top: 1.5rem;
+      background-color: #0d1117;
+      display: inline-block;
+      padding: 1rem 2rem;
+      border-radius: 10px;
+      border: 1px solid #24caff;
+    }
+
+    .highlight-box span {
+      display: block;
+      margin: 0.3rem 0;
+      font-weight: 600;
+      color: #f7d774;
+    }
+
+    .testimoni-section {
+      padding: 2rem;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .testimoni-card {
+      background-color: #0d1117;
+      padding: 1.2rem;
+      border-radius: 10px;
+      border: 1px solid #2e2e2e;
+      transition: 0.3s ease;
+      position: relative;
+    }
+
+    .testimoni-card:hover {
+      transform: translateY(-5px);
+      border-color: #24caff;
+    }
+
+    .client-name {
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+      color: #3ee8ff;
+    }
+
+    .client-quote {
+      font-style: italic;
+      font-size: 0.95rem;
+      color: #ddd;
+    }
+
+    .badge {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background-color: #3ee8ff;
+      color: #000;
+      font-size: 0.75rem;
+      padding: 0.3rem 0.6rem;
+      border-radius: 20px;
+      font-weight: bold;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      color: #777;
+      background-color: #000;
+      border-top: 1px solid #1a1a1a;
+    }
+  </style>
 </head>
 <body>
 
   <header>
     <a href="index.html">← Kembali ke Beranda</a>
-    <strong>Testimoni MarshalDev</strong>
+    <strong style="color:#fff">Testimoni MarshalDev</strong>
   </header>
 
   <section class="hero">
@@ -25,19 +139,17 @@
   </section>
 
   <section class="testimoni-section">
-    <!-- Testimoni 30 Client -->
-    <div class="testimoni-card"><span class="badge">⭐️ 5.0</span><div class="client-name">Rafli</div><div class="client-quote">Jasa developer paling worth it, gua request fitur langsunh satset wkwk keren</div></div>
+    <!-- Testimoni -->
+    <div class="testimoni-card"><span class="badge">⭐️ 5.0</span><div class="client-name">Rafli</div><div class="client-quote">Jasa developer paling worth it, gua request fitur langsung satset wkwk keren</div></div>
     <div class="testimoni-card"><span class="badge">⭐️ 5.0</span><div class="client-name">Kilua</div><div class="client-quote">Gamemode oldschool keren sih karena gua ngikutin luminar dari 0 makanya sange.</div></div>
-    <div class="testimoni-card"><span class="badge">⭐️ 5.0</span><div class="client-name">Ambasing</div><div class="client-quote">Setup cepat dan responsif. Supportnya nya juga bagus, bintang nya sampe jebol wok</div></div>
+    <div class="testimoni-card"><span class="badge">⭐️ 5.0</span><div class="client-name">Ambasing</div><div class="client-quote">Setup cepat dan responsif. Supportnya juga bagus, bintang nya sampe jebol wok</div></div>
     <div class="testimoni-card"><span class="badge">⭐️ 4.9</span><div class="client-name">FikriSamp</div><div class="client-quote">Gua jasa setup+beli gamemode udah kaya setan tanganya cepet bet tiba tiba kelar</div></div>
     <div class="testimoni-card"><span class="badge">⭐️ 5.0</span><div class="client-name">Zeevan0k</div><div class="client-quote">Hosting murah tapi kualitas bintang lima, repeat order wajib lah gile</div></div>
-    <div class="testimoni-card"><span class="badge">⭐️ 4.8</span><div class="client-name">Hanzo</div><div class="client-quote">Jasa dev sebulan dan setiap pengerjaan selalu bilang sampai selesai pun bilang list update udeh di kerjain top banget mas next lagi</div></div>
+    <div class="testimoni-card"><span class="badge">⭐️ 4.8</span><div class="client-name">Hanzo</div><div class="client-quote">Jasa dev sebulan dan setiap pengerjaan selalu update, top banget mas next lagi</div></div>
     <div class="testimoni-card"><span class="badge">⭐️ 5.0</span><div class="client-name">Khal</div><div class="client-quote">Pelayanan cepat dan sangat komunikatif. Terbaik sih ini.</div></div>
     <div class="testimoni-card"><span class="badge">⭐️ 5.0</span><div class="client-name">Imran</div><div class="client-quote">Gamemodenya tinggal pakai dan sudah optimal tanpa kendala bug merosahkan wkwkwk</div></div>
     <div class="testimoni-card"><span class="badge">⭐️ 4.7</span><div class="client-name">Ilham</div><div class="client-quote">Saya beli hosting ryzen 16gb buset ngebutnya kaya lagi balap dikejar polisi</div></div>
     <div class="testimoni-card"><span class="badge">⭐️ 5.0</span><div class="client-name">Rendi</div><div class="client-quote">Work it browww gua fix bug sama jasa script td memuaskan</div></div>
-
-    <!-- ... lanjutkan sisanya sesuai yang tadi ya bro (total 30 card) -->
   </section>
 
   <footer>
