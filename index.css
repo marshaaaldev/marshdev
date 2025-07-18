@@ -1,0 +1,48 @@
+/* index.css */ body { background-color: #0d111d; color: #d0faff; font-family: 'Segoe UI', sans-serif; margin: 0; padding: 0; }
+
+.navbar { background-color: #111827; position: sticky; top: 0; z-index: 999; }
+
+.nav-container { max-width: 1200px; margin: auto; padding: 15px 20px; display: flex; justify-content: space-between; align-items: center; }
+
+.nav-logo { font-size: 1.4rem; font-weight: bold; color: #70e0ff; }
+
+.nav-links { display: flex; gap: 25px; }
+
+.nav-links a { color: #70e0ff; text-decoration: none; font-weight: 600; transition: color 0.3s; }
+
+.nav-links a:hover { color: #ffffff; }
+
+.nav-toggle { display: none; font-size: 28px; color: #70e0ff; cursor: pointer; }
+
+@media (max-width: 768px) { .nav-links { display: none; flex-direction: column; background-color: #111827; position: absolute; top: 60px; left: 0; width: 100%; padding: 20px; gap: 15px; border-top: 1px solid #1f2937; }
+
+.nav-links.show { display: flex; }
+
+.nav-toggle { display: block; } }
+
+.intro { padding: 60px 20px; text-align: center; }
+
+.fade-zoom-text { font-size: 2.5rem; background: linear-gradient(to right, #70e0ff, #00e0ff); -webkit-background-clip: text; color: transparent; opacity: 0; transform: scale(0.8); animation: fadeZoomIn 1.8s ease forwards; }
+
+@keyframes fadeZoomIn { to { opacity: 1; transform: scale(1); } }
+
+.skills-section { text-align: center; }
+
+.section-title { margin-top: 40px; font-size: 1.8rem; color: #70e0ff; }
+
+.skills { display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; padding: 30px 20px; }
+
+.skill-card { background-color: #1e2537; padding: 15px; border-radius: 12px; text-align: center; width: 120px; transition: transform 0.3s; }
+
+.skill-card:hover { transform: scale(1.05); background-color: #2a3148; }
+
+.skill-card img { width: 40px; height: 40px; margin-bottom: 8px; }
+
+.cta { text-align: center; margin-top: 50px; }
+
+.btn { display: inline-block; margin-top: 20px; padding: 12px 24px; border: none; border-radius: 8px; background: linear-gradient(90deg, #00e0ff, #00b3ff); color: #fff; text-decoration: none; font-weight: bold; transition: background-color 0.3s ease; box-shadow: 0 0 12px #00e0ff55; }
+
+.btn:hover { background: linear-gradient(90deg, #00b3ff, #00e0ff); }
+
+footer { text-align: center; margin-top: 80px; padding: 20px; font-size: 14px; background-color: #1a1f2e; color: #70e0ff; }
+
