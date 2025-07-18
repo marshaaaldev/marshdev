@@ -4,194 +4,241 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Dashboard - MarshDev</title>
-  <link rel="stylesheet" href="dashboard.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
   <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Inter', sans-serif;
+    }
     body {
       background-color: #000;
       color: #fff;
-      font-family: 'Segoe UI', sans-serif;
-      margin: 0;
-      padding: 0;
     }
-
     .navbar {
-      background-color: #0a0a0a;
-      padding: 1rem 2rem;
+      background-color: #000;
+      padding: 15px 20px;
       display: flex;
       align-items: center;
+      border-bottom: 1px solid #1a1f2e;
     }
-
-    .navbar .brand {
+    .brand {
       font-weight: bold;
-      font-size: 1.3rem;
-      color: #00e6ff;
+      font-size: 20px;
+      color: white;
     }
-
     .menu-toggle {
-      margin-left: 1rem;
-      font-size: 1.4rem;
-      color: #00e6ff;
+      margin-left: 10px;
+      font-size: 24px;
+      color: white;
     }
-
-    .navbar a {
+    a {
       text-decoration: none;
     }
-
-    .section {
-      padding: 3rem 2rem;
+    .navbar a {
+      color: white;
+      font-weight: bold;
+      margin-left: auto;
     }
-
+    .section {
+      padding: 40px 20px;
+      text-align: center;
+    }
     .section span {
       display: inline-block;
-      background: #0e0e0e;
-      padding: 0.5rem 1rem;
-      border-radius: 20px;
-      color: #fff;
-      font-weight: bold;
-      margin-bottom: 1rem;
+      background-color: #1f2a44;
+      color: #00ffff;
+      padding: 6px 15px;
+      border-radius: 999px;
+      font-size: 14px;
+      margin-bottom: 15px;
     }
-
     .section h1 {
-      font-size: 2rem;
-      color: #00e6ff;
-      margin-bottom: 1rem;
+      font-size: 24px;
+      margin-bottom: 10px;
+      color: white;
     }
-
     .section p {
-      color: #fff;
-      line-height: 1.6;
-      margin-bottom: 2rem;
+      font-size: 16px;
+      color: #cdd4f7;
+      max-width: 600px;
+      margin: 0 auto 30px;
     }
-
-    .feature-grid {
+    .plan-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 1.5rem;
-      margin-bottom: 2rem;
+      gap: 20px;
+      margin-top: 20px;
     }
-
-    .feature-box {
-      background-color: #111;
-      border: 1px solid #1f1f1f;
-      padding: 1rem;
-      border-radius: 10px;
+    .plan-card {
+      background-color: #0a0a0a;
+      border: 1px solid #1f2a44;
+      border-radius: 15px;
+      padding: 25px;
+      box-shadow: 0 0 20px rgba(0,255,255,0.05);
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
     }
-
-    .feature-box h4 {
-      color: #00e6ff;
-      margin-bottom: 0.5rem;
+    .plan-card h3 {
+      font-size: 20px;
+      margin-bottom: 5px;
+      color: #00ffff;
     }
-
-    .feature-box p {
+    .plan-card h2 {
+      font-size: 26px;
+      margin-bottom: 5px;
+      color: #00ffff;
+    }
+    .plan-card p {
+      font-size: 14px;
+      margin-bottom: 15px;
       color: #ccc;
-      font-size: 0.95rem;
     }
-
+    .checklist {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 15px 0;
+      width: 100%;
+    }
+    .checklist li {
+      display: flex;
+      align-items: center;
+      margin-bottom: 8px;
+      color: #ccc;
+    }
+    .checklist li::before {
+      content: '✔️';
+      margin-right: 10px;
+      color: #00ffff;
+    }
     .btn-primary {
-      display: inline-block;
-      background: #00e6ff;
+      background: #00ffff;
       color: #000;
       font-weight: bold;
-      padding: 0.8rem 1.5rem;
-      border-radius: 6px;
+      padding: 10px 20px;
+      border-radius: 8px;
       text-decoration: none;
+      margin-top: auto;
       transition: 0.3s;
     }
-
     .btn-primary:hover {
-      background-color: #00bcd4;
+      background: #00cccc;
     }
-
     footer {
-      background: #0a0a0a;
       text-align: center;
-      padding: 1rem;
-      font-size: 0.9rem;
-      color: #777;
+      padding: 20px;
+      font-size: 14px;
+      color: #999;
+      background-color: #000;
+      margin-top: 40px;
     }
   </style>
 </head>
 <body>
-
-  <!-- Navbar -->
   <div class="navbar">
     <div class="brand">MarshDev</div>
     <div class="menu-toggle">☰</div>
-    <a href="index.html" style="color:#00e6ff; font-weight:bold; margin-left:auto;">← Kembali ke Home</a>
+    <a href="index.html">← Kembali ke Home</a>
   </div>
 
-  <!-- Jasa Developer -->
-  <section class="section" id="jasa-dev">
+  <section class="section">
     <span>Layanan Developer</span>
     <h1>Jasa Pembuatan Forum, UCP & Scripting SA-MP</h1>
-    <p>MarshalDev bantu lo bangun sistem impian: forum, panel, fitur dynamic, textdraw, dan keamanan server.</p>
-
-    <div class="feature-grid">
-      <div class="feature-box">
-        <h4>⚙️ Jasa Scripting SA-MP</h4>
-        <p>Bangun fitur keren seperti dynamic job, RP system, system mapping, dan banyak lagi.</p>
+    <p>MarshalDev bantu lu bangun sistem impian: forum, panel, fitur dynamic, textdraw, dan keamanan server.</p>
+    <div class="plan-grid">
+      <div class="plan-card">
+        <h3>⚙️ Jasa Developer SA-MP</h3>
+        <p>TIME WORK AT 8PM-1AM</p>
+        <ul class="checklist">
+          <li>Bebas Request Update</li>
+          <li>Update 3 Sampai 4 Kali Sehari</li>
+          <li>Perminggu 150k- Perbulan 350k</li>
+        </ul>
+        <a href="https://chat.whatsapp.com/FQsKqNzWwUGKDPIYdPMxxb?mode=ac_t" target="_blank" class="btn-primary">📥 Pesan Sekarang</a>
       </div>
-      <div class="feature-box">
-        <h4>🖌️ Jasa Desain Forum</h4>
-        <p>Desain responsive, clean, aesthetic, dan cocok untuk komunitas besar.</p>
+      <div class="plan-card">
+        <h3>🖌️ Jasa Desain Forum</h3>
+        <p>DESAIN RESPONSIVE, AESTHETIC & COCOK UNTUK SERVER KAMU YANG INGIN PAKAI WEBSITE</p>
+        <ul class="checklist">
+          <li>Clean UI/UX</li>
+          <li>Dark Mode</li>
+          <li>Mobile Responsive</li>
+          <li>Pengerjaan 1 Sampai 7 Hari</li>
+          <li>Start 0-500k</li>
+        </ul>
+        <a href="https://chat.whatsapp.com/FQsKqNzWwUGKDPIYdPMxxb?mode=ac_t" target="_blank" class="btn-primary">📥 Pesan Sekarang</a>
       </div>
-      <div class="feature-box">
-        <h4>🔧 Jasa Setup UCP</h4>
-        <p>UCP yang terintegrasi langsung ke server kamu. UI bisa disesuaikan sesuai request.</p>
-      </div>
-      <div class="feature-box">
-        <h4>🐞 Fix Bug & Tambah Fitur</h4>
-        <p>50K untuk 2-3 fitur per update. Cocok buat server yang butuh improvement cepat.</p>
-      </div>
-      <div class="feature-box">
-        <h4>📆 Paket Developer Mingguan</h4>
-        <p>150K/minggu. 3-4 fitur sesuai permintaan, update berkala dan konsultasi bebas.</p>
-      </div>
-      <div class="feature-box">
-        <h4>📅 Paket Developer Bulanan</h4>
-        <p>350K/bulan. Fitur dan update bebas, garansi revisi & dukungan penuh dari tim MarshDev.</p>
+      <div class="plan-card">
+        <h3>🔧 Setup Buy Gm+Hosting</h3>
+        <p>INI UNTUK KAMU YANG CARI SERVER SIAP MENGUDARA</p>
+        <ul class="checklist">
+          <li>Setup Gamemode</li>
+          <li>Ganti Nama Server</li>
+          <li>Setup Bot Ke Discord</li>
+          <li>Gm & Hosting Dari Saya / Kalian</li>
+          <li>Price 150k</li>
+        </ul>
+        <a href="https://chat.whatsapp.com/FQsKqNzWwUGKDPIYdPMxxb?mode=ac_t" target="_blank" class="btn-primary">📥 Pesan Sekarang</a>
       </div>
     </div>
-
-    <a href="https://wa.me/62xxxxxxxxx" class="btn-primary">Diskusi via WhatsApp</a>
   </section>
 
-  <!-- Hosting -->
-  <section class="section" id="hosting">
+  <section class="section">
     <span>Hosting Game & Tools</span>
-    <h1>Hosting Cepat & Stabil untuk Semua Kebutuhan</h1>
-    <p>Pakai server AMD Ryzen EPYC berkualitas, dengan panel ringan, auto backup, dan DDoS protection.</p>
-
-    <div class="feature-grid">
-      <div class="feature-box">
-        <h4>🌐 1 GB RAM</h4>
-        <p>Harga: 10K <br> Slot: 10 Slot</p>
+    <h1>Paket Hosting Stabil & Terjangkau</h1>
+    <p>Pakai server Ryzen EPYC, auto backup, dan proteksi DDoS terbaik.</p>
+    <div class="plan-grid">
+      <div class="plan-card">
+        <h3>Basic Plan</h3>
+        <h2>Rp10.000/GB</h2>
+        <p>COCOK UNTUK SERVER BARU JALAN</p>
+        <ul class="checklist">
+          <li>1GB Plan</li>
+          <li>Perlindungan DDoS</li>
+          <li>Lokasi Server Singapura</li>
+        </ul>
+        <a href="https://chat.whatsapp.com/FQsKqNzWwUGKDPIYdPMxxb?mode=ac_t" target="_blank" class="btn-primary">📥 Pilih Paket Ini</a>
       </div>
-      <div class="feature-box">
-        <h4>🌐 2 GB RAM</h4>
-        <p>Harga: 20K <br> Slot: 25 Slot</p>
+      <div class="plan-card">
+        <h3>2GB Plan</h3>
+        <h2>Rp20.000</h2>
+        <p>COCOK UNTUK SERVER SEDANG BERKEMBANG</p>
+        <ul class="checklist">
+          <li>25 Slot</li>
+          <li>Backup Otomatis</li>
+          <li>Panel Ringan</li>
+        </ul>
+        <a href="https://chat.whatsapp.com/FQsKqNzWwUGKDPIYdPMxxb?mode=ac_t" target="_blank" class="btn-primary">📥 Pilih Paket Ini</a>
       </div>
-      <div class="feature-box">
-        <h4>🌐 4 GB RAM</h4>
-        <p>Harga: 50K <br> Slot: 55 Slot</p>
+      <div class="plan-card">
+        <h3>4GB Plan</h3>
+        <h2>Rp50.000</h2>
+        <p>IDEAL UNTUK SERVER SEDANG</p>
+        <ul class="checklist">
+          <li>55 Slot</li>
+          <li>Dukungan Uptime 99%</li>
+          <li>Monitoring</li>
+        </ul>
+        <a href="https://chat.whatsapp.com/FQsKqNzWwUGKDPIYdPMxxb?mode=ac_t" target="_blank" class="btn-primary">📥 Pilih Paket Ini</a>
       </div>
-      <div class="feature-box">
-        <h4>🌐 6 GB RAM</h4>
-        <p>Harga: 75K <br> Slot: 75 Slot</p>
-      </div>
-      <div class="feature-box">
-        <h4>🚀 Spesifikasi Server</h4>
-        <p>Prosesor: AMD Ryzen EPYC <br> SSD NVMe, Low Ping, dan Uptime 99.9%</p>
+      <div class="plan-card">
+        <h3>6GB Plan</h3>
+        <h2>Rp70.000</h2>
+        <p>COCOK UNTUK SERVER SUDAH RAMAI</p>
+        <ul class="checklist">
+          <li>75 Slot</li>
+          <li>Anti Lag</li>
+          <li>Support 24/7</li>
+        </ul>
+        <a href="https://chat.whatsapp.com/FQsKqNzWwUGKDPIYdPMxxb?mode=ac_t" target="_blank" class="btn-primary">📥 Pilih Paket Ini</a>
       </div>
     </div>
-
-    <a href="https://wa.me/62xxxxxxxxx" class="btn-primary">Order Hosting Sekarang</a>
   </section>
 
-  <!-- Footer -->
   <footer>
     © 2025 MarshDev. Build with ❤️ untuk komunitas server lokal.
   </footer>
-
 </body>
 </html>
