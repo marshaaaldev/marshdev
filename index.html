@@ -1,234 +1,29 @@
-<!DOCTYPE html>
-<html lang="id">
+<!DOCTYPE html><html lang="id">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>MarshDev - Forum & Skill</title>
-  <style>
-    body {
-      background-color: #0d111d;
-      color: #e5e5e5;
-      font-family: 'Segoe UI', sans-serif;
-      margin: 0;
-      padding: 0;
-    }
-
-    /* Hero Animasi */
-    .fade-zoom-text {
-      font-size: 2.5rem;
-      background: linear-gradient(to right, #3b82f6, #60a5fa);
-      -webkit-background-clip: text;
-      color: transparent;
-      opacity: 0;
-      transform: scale(0.8);
-      animation: fadeZoomIn 1.8s ease forwards;
-    }
-
-    @keyframes fadeZoomIn {
-      to {
-        opacity: 1;
-        transform: scale(1);
-      }
-    }
-
-    .skills {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 20px;
-      padding: 30px 20px;
-    }
-
-    .skill-card {
-      background-color: #1e2537;
-      padding: 15px;
-      border-radius: 12px;
-      text-align: center;
-      width: 120px;
-      transition: transform 0.3s;
-    }
-
-    .skill-card:hover {
-      transform: scale(1.05);
-      background-color: #2a3148;
-    }
-
-    .skill-card img {
-      width: 40px;
-      height: 40px;
-      margin-bottom: 8px;
-    }
-
-    .aesthetic-banner {
-      text-align: center;
-      margin-top: 40px;
-    }
-
-    .aesthetic-banner img {
-      width: 100%;
-      max-width: 1000px;
-      border-radius: 12px;
-      box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
-    }
-
-    .btn {
-      display: inline-block;
-      margin-top: 20px;
-      padding: 12px 24px;
-      border: none;
-      border-radius: 8px;
-      background-color: #3b82f6;
-      color: white;
-      text-decoration: none;
-      font-weight: bold;
-      transition: background-color 0.3s ease;
-    }
-
-    .btn:hover {
-      background-color: #2563eb;
-    }
-
-    footer {
-      text-align: center;
-      margin-top: 80px;
-      padding: 20px;
-      font-size: 14px;
-      background-color: #1a1f2e;
-      color: #8f9bb8;
-    }
-
-    @media (max-width: 768px) {
-      #menu {
-        display: none;
-        flex-direction: column;
-        margin-top: 15px;
-        gap: 10px;
-      }
-      #toggle:checked + nav #menu {
-        display: flex;
-      }
-      #menu-icon {
-        display: block !important;
-      }
-    }
-  </style>
+  <link rel="stylesheet" href="index.css" />
 </head>
-<body>
-
-  <!-- Navbar Responsive -->
-<header style="background-color:#1a1f2e; position:sticky; top:0; z-index:999;">
-  <style>
-    .nav-container {
-      max-width: 1200px;
-      margin: auto;
-      padding: 15px 20px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    .nav-logo {
-      font-size: 1.4rem;
-      font-weight: bold;
-      color: #aab8ff;
-    }
-
-    .nav-links {
-      display: flex;
-      gap: 25px;
-    }
-
-    .nav-links a {
-      color: #aab8ff;
-      text-decoration: none;
-      font-weight: 600;
-      transition: color 0.3s;
-    }
-
-    .nav-links a:hover {
-      color: #ffffff;
-    }
-
-    .nav-toggle {
-      display: none;
-      font-size: 28px;
-      color: #aab8ff;
-      cursor: pointer;
-    }
-
-    @media (max-width: 768px) {
-      .nav-links {
-        display: none;
-        flex-direction: column;
-        background-color: #1a1f2e;
-        position: absolute;
-        top: 60px;
-        left: 0;
-        width: 100%;
-        padding: 20px;
-        gap: 15px;
-        z-index: 1000;
-        border-top: 1px solid #2e3448;
-      }
-
-      .nav-links.show {
-        display: flex;
-      }
-
-      .nav-toggle {
-        display: block;
-      }
-    }
-  </style>
-
-  <div class="nav-container">
-    <div class="nav-logo">MarshDev</div>
-    <div class="nav-toggle" onclick="document.querySelector('.nav-links').classList.toggle('show')">☰</div>
-    <nav class="nav-links">
-      <a href="index.html">Home</a>
-      <a href="dashboard.html">Dashboard</a>
-      <a href="sell.html">Product</a>
-      <a href="testimoni.html">Testimoni</a>
-      <a href="galeri.html">Galeri</a>
-    </nav>
-  </div>
-</header>
-    </nav>
-  </div>
-  <style>
-    @media (max-width: 768px) {
-      #nav-icon { display: block; }
-      #nav-menu {
-        display: none;
-        flex-direction: column;
-        background-color: #1a1f2e;
-        padding: 10px 20px;
-      }
-      #nav-toggle:checked + label + #nav-menu {
-        display: flex;
-      }
-      #nav-menu a {
-        padding: 10px 0;
-        border-bottom: 1px solid #2a3148;
-      }
-    }
-  </style>
-</header>
-      </div>
+<body>  <!-- Navbar Responsive -->  <header class="navbar">
+    <div class="nav-container">
+      <div class="nav-logo">MarshDev</div>
+      <div class="nav-toggle" onclick="document.querySelector('.nav-links').classList.toggle('show')">☰</div>
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="sell.html">Product</a>
+        <a href="testimoni.html">Testimoni</a>
+        <a href="galeri.html">Galeri</a>
+      </nav>
     </div>
-  </nav>
-
-  <!-- Intro -->
-  <section class="intro" style="padding: 60px 20px; text-align: center;">
+  </header>  <!-- Intro -->  <section class="intro">
     <h2 class="fade-zoom-text">Selamat Datang di MarshDev!</h2>
     <p>
       Tempatnya para developer, scripter, dan pejuang server berkumpul! Di sini kamu bisa lihat skill, jasa, dan preview karya developer lokal. Santai tapi produktif.
     </p>
-  </section>
-
-  <!-- Skill -->
-  <section>
-    <h2 style="text-align:center;">⚙️ Skill Aktif</h2>
+  </section>  <!-- Skill -->  <section>
+    <h2 class="section-title">⚙️ Skill Aktif</h2>
     <div class="skills">
       <div class="skill-card">
         <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" alt="C++">
@@ -251,19 +46,10 @@
         Node.js
       </div>
     </div>
-  </section>
-
-
-  <!-- CTA -->
-  <section style="text-align:center; margin-top: 50px;">
+  </section>  <!-- CTA -->  <section class="cta">
     <h3>Punya project? Butuh developer?</h3>
     <a href="dashboard.html" class="btn">Cek Jasa Developer Sekarang 🚀</a>
-  </section>
-
-  <!-- Footer -->
-  <footer>
+  </section>  <!-- Footer -->  <footer>
     © 2025 MarshDev. Build with ❤️ in Indonesia.
-  </footer>
-
-</body>
+  </footer></body>
 </html>
