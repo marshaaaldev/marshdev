@@ -1,55 +1,73 @@
-<!DOCTYPE html><html lang="id">
+<!DOCTYPE html>
+<html lang="id">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>MarshDev - Forum & Skill</title>
   <link rel="stylesheet" href="index.css" />
 </head>
-<body>  <!-- Navbar Responsive -->  <header class="navbar">
-    <div class="nav-container">
-      <div class="nav-logo">MarshDev</div>
-      <div class="nav-toggle" onclick="document.querySelector('.nav-links').classList.toggle('show')">☰</div>
-      <nav class="nav-links">
-        <a href="index.html">Home</a>
-        <a href="dashboard.html">Dashboard</a>
-        <a href="sell.html">Product</a>
-        <a href="testimoni.html">Testimoni</a>
-        <a href="galeri.html">Galeri</a>
-      </nav>
+<body>
+
+<!-- Navbar -->
+<header class="navbar">
+  <div class="nav-container">
+    <div class="nav-logo">MarshDev</div>
+    <div class="nav-toggle" onclick="document.querySelector('.nav-links').classList.toggle('show')">☰</div>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="dashboard.html">Dashboard</a>
+      <a href="sell.html">Product</a>
+      <a href="testimoni.html">Testimoni</a>
+      <a href="galeri.html">Galeri</a>
+    </nav>
+  </div>
+</header>
+
+<!-- Hero -->
+<section class="intro">
+  <h2 class="fade-zoom-text">Selamat Datang di MarshDev!</h2>
+  <p class="subtext">
+    Tempatnya para developer, scripter, dan pejuang server berkumpul! Di sini kamu bisa lihat skill, jasa, dan preview karya developer lokal. Santai tapi produktif.
+  </p>
+</section>
+
+<!-- Skill -->
+<section>
+  <h2 class="section-title">⚙️ Skill Aktif</h2>
+  <div class="skills">
+    <div class="skill-card">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" alt="C++">
+      C++
     </div>
-  </header>  <!-- Intro -->  <section class="intro">
-    <h2 class="fade-zoom-text">Selamat Datang di MarshDev!</h2>
-    <p>
-      Tempatnya para developer, scripter, dan pejuang server berkumpul! Di sini kamu bisa lihat skill, jasa, dan preview karya developer lokal. Santai tapi produktif.
-    </p>
-  </section>  <!-- Skill -->  <section>
-    <h2 class="section-title">⚙️ Skill Aktif</h2>
-    <div class="skills">
-      <div class="skill-card">
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" alt="C++">
-        C++
-      </div>
-      <div class="skill-card">
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript">
-        JavaScript
-      </div>
-      <div class="skill-card">
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/ruby/ruby-original.svg" alt="Ruby">
-        Ruby
-      </div>
-      <div class="skill-card">
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python">
-        Python
-      </div>
-      <div class="skill-card">
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js">
-        Node.js
-      </div>
+    <div class="skill-card">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript">
+      JavaScript
     </div>
-  </section>  <!-- CTA -->  <section class="cta">
-    <h3>Punya project? Butuh developer?</h3>
-    <a href="dashboard.html" class="btn">Cek Jasa Developer Sekarang 🚀</a>
-  </section>  <!-- Footer -->  <footer>
-    © 2025 MarshDev. Build with ❤️ in Indonesia.
-  </footer></body>
+    <div class="skill-card">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/ruby/ruby-original.svg" alt="Ruby">
+      Ruby
+    </div>
+    <div class="skill-card">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python">
+      Python
+    </div>
+    <div class="skill-card">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js">
+      Node.js
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta">
+  <h3>Punya project? Butuh developer?</h3>
+  <a href="dashboard.html" class="btn">Cek Jasa Developer Sekarang 🚀</a>
+</section>
+
+<!-- Footer -->
+<footer>
+  © 2025 MarshDev. Build with ❤️ in Indonesia.
+</footer>
+
+</body>
 </html>
