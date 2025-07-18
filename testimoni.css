@@ -1,60 +1,108 @@
-/* testimoni.css */
 body {
-  background-color: #000000;
-  color: #d6faff;
-  font-family: 'Segoe UI', sans-serif;
   margin: 0;
-  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: #0d111d;
+  color: #ffffff;
 }
 
-a {
-  color: #7ecfff;
+header {
+  background-color: #10162c;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+header a {
+  color: #6befff;
   text-decoration: none;
   font-weight: 600;
 }
 
-a:hover {
-  color: #ffffff;
-}
-
-h1, h2, h3 {
-  color: #4fedff;
-}
-
-.container {
-  max-width: 900px;
-  margin: auto;
-  padding: 40px 20px;
+.hero {
+  background: linear-gradient(135deg, #131921, #0f111a);
+  padding: 3rem 2rem;
   text-align: center;
+  border-bottom: 2px solid #3be0fc;
 }
 
-.card {
-  background-color: #0e0e0e;
-  border: 1px solid #2de4ff40;
-  border-radius: 16px;
-  padding: 20px;
-  margin-top: 30px;
-  color: #fff7c2;
+.hero h1 {
+  font-size: 2.5rem;
+  color: #6befff;
+  margin-bottom: 1rem;
+}
+
+.hero p {
   font-size: 1.1rem;
-  box-shadow: 0 0 12px rgba(0, 255, 255, 0.1);
+  color: #ccc;
 }
 
-.card span {
+.highlight-box {
+  margin-top: 1.5rem;
+  background-color: #111827;
+  display: inline-block;
+  padding: 1rem 2rem;
+  border-radius: 10px;
+  border: 1px solid #3be0fc;
+}
+
+.highlight-box span {
   display: block;
-  margin-bottom: 15px;
+  margin: 0.3rem 0;
   font-weight: 600;
+  color: #f7d774;
 }
 
-.card span::before {
-  content: '✨ ';
-  color: #4fedff;
+.testimoni-section {
+  padding: 2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.testimoni-card {
+  background-color: #101827;
+  padding: 1.2rem;
+  border-radius: 10px;
+  border: 1px solid #2a2f3d;
+  transition: 0.3s ease;
+  position: relative;
+}
+
+.testimoni-card:hover {
+  transform: translateY(-5px);
+  border-color: #6befff;
+}
+
+.client-name {
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #6befff;
+}
+
+.client-quote {
+  font-style: italic;
+  font-size: 0.95rem;
+  color: #ddd;
+}
+
+.badge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: #6befff;
+  color: #000;
+  font-size: 0.75rem;
+  padding: 0.3rem 0.6rem;
+  border-radius: 20px;
+  font-weight: bold;
 }
 
 footer {
-  margin-top: 60px;
-  padding: 20px;
   text-align: center;
-  font-size: 14px;
-  color: #888;
-  background-color: #0d0d0d;
+  padding: 1rem;
+  color: #aaa;
+  background-color: #0d111d;
+  border-top: 1px solid #2c2f45;
 }
