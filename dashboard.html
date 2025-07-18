@@ -1,118 +1,92 @@
 <!DOCTYPE html>
 <html lang="id">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dashboard Developer | MarshDev</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
-  <style>
-    body {
-      background-color: #0a1d37;
-      color: #fff;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    }
-    .badge {
-      font-size: 0.9em;
-    }
-    .testimoni {
-      background-color: #0e2a4d;
-      border-radius: 15px;
-      padding: 20px;
-      margin-bottom: 20px;
-    }
-    .paket {
-      background-color: #0e2a4d;
-      border-radius: 15px;
-      padding: 25px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.4);
-      border-left: 5px solid #1e90ff;
-    }
-    .order-form {
-      background-color: #0e2a4d;
-      border-radius: 15px;
-      padding: 25px;
-      margin-top: 40px;
-    }
-    .form-control, .btn {
-      border-radius: 10px;
-    }
-  </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dashboard - MarshDev</title>
+  <link rel="stylesheet" href="dashboard.css">
 </head>
-
 <body>
-  <div class="container py-5">
-    <div class="text-center mb-4">
-      <h1 class="fw-bold">Dashboard Developer</h1>
-      <span class="badge bg-success">Developer Profesional</span>
-    </div>
 
-    <div class="row g-4 mb-5">
-      <div class="col-md-4">
-        <div class="paket text-center">
-          <h4>Jasa Developer</h4>
-          <p>Mulai dari skrip dasar hingga kompleks</p>
-          <h5 class="text-warning">Rp 100.000</h5>
-          <a href="#order" class="btn btn-primary w-100">Pesan Sekarang</a>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="paket text-center">
-          <h4>Jasa Forum</h4>
-          <p>Forum website publik dengan fitur diskusi</p>
-          <h5 class="text-warning">Rp 100.000</h5>
-          <a href="#order" class="btn btn-primary w-100">Pesan Sekarang</a>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="paket text-center">
-          <h4>Gamemode + Hosting</h4>
-          <p>Full GM + hosting siap pakai</p>
-          <h5 class="text-warning">Rp 150.000</h5>
-          <a href="#order" class="btn btn-primary w-100">Pesan Sekarang</a>
-        </div>
-      </div>
-    </div>
-
-    <div class="order-form" id="order">
-      <h4 class="mb-3">Formulir Pemesanan</h4>
-      <form action="https://formspree.io/f/mwkgywlp" method="POST">
-        <div class="mb-3">
-          <label for="nama" class="form-label">Nama</label>
-          <input type="text" class="form-control" id="nama" name="nama" required>
-        </div>
-        <div class="mb-3">
-          <label for="email" class="form-label">Email</label>
-          <input type="email" class="form-control" id="email" name="email" required>
-        </div>
-        <div class="mb-3">
-          <label for="jenis" class="form-label">Jenis Layanan</label>
-          <select class="form-control" id="jenis" name="jenis">
-            <option>Jasa Developer</option>
-            <option>Jasa Forum</option>
-            <option>Gamemode + Hosting</option>
-          </select>
-        </div>
-        <div class="mb-3">
-          <label for="pesan" class="form-label">Pesan atau Permintaan Khusus</label>
-          <textarea class="form-control" id="pesan" name="pesan" rows="4"></textarea>
-        </div>
-        <button type="submit" class="btn btn-success">Kirim Pesanan</button>
-      </form>
-    </div>
-
-    <div class="mt-5">
-      <h4 class="mb-4">Testimoni Klien</h4>
-      <div class="testimoni">
-        <p><strong>Agung Pratama:</strong> "Pelayanan cepat dan ramah. Project selesai tepat waktu dan sesuai harapan!"</p>
-      </div>
-      <div class="testimoni">
-        <p><strong>Devan Mahendra:</strong> "Websitenya keren, desain elegan dan fitur lengkap. Worth it pokoknya!"</p>
-      </div>
-      <div class="testimoni">
-        <p><strong>Rizky Ramadhan:</strong> "Saya pesan gamemode, langsung jadi dan tinggal pakai. Gila sih, mantap banget."</p>
-      </div>
-    </div>
+  <!-- Navbar -->
+  <div class="navbar">
+    <div class="brand">MarshDev</div>
+    <div class="menu-toggle">☰</div>
+    <a href="index.html" style="color:#00ffff; font-weight:bold; margin-left:auto;">← Kembali ke Home</a>
   </div>
+
+  <!-- Jasa Developer -->
+  <section class="section" id="jasa-dev">
+    <span>Layanan Developer</span>
+    <h1>Jasa Pembuatan Forum, UCP & Scripting SA-MP</h1>
+    <p>MarshalDev bantu lo bangun sistem impian: forum, panel, fitur dynamic, textdraw, dan keamanan server.</p>
+
+    <div class="feature-grid">
+      <div class="feature-box">
+        <h4>⚙️ Jasa Scripting SA-MP</h4>
+        <p>Bangun fitur keren seperti dynamic job, RP system, system mapping, dan banyak lagi.</p>
+      </div>
+      <div class="feature-box">
+        <h4>🖌️ Jasa Desain Forum</h4>
+        <p>Desain responsive, clean, aesthetic, dan cocok untuk komunitas besar.</p>
+      </div>
+      <div class="feature-box">
+        <h4>🔧 Jasa Setup UCP</h4>
+        <p>UCP yang terintegrasi langsung ke server kamu. UI bisa disesuaikan sesuai request.</p>
+      </div>
+      <div class="feature-box">
+        <h4>🐞 Fix Bug & Tambah Fitur</h4>
+        <p>50K untuk 2-3 fitur per update. Cocok buat server yang butuh improvement cepat.</p>
+      </div>
+      <div class="feature-box">
+        <h4>📆 Paket Developer Mingguan</h4>
+        <p>150K/minggu. 3-4 fitur sesuai permintaan, update berkala dan konsultasi bebas.</p>
+      </div>
+      <div class="feature-box">
+        <h4>📅 Paket Developer Bulanan</h4>
+        <p>350K/bulan. Fitur dan update bebas, garansi revisi & dukungan penuh dari tim MarshDev.</p>
+      </div>
+    </div>
+
+    <a href="https://wa.me/62xxxxxxxxx" class="btn-primary">Diskusi via WhatsApp</a>
+  </section>
+
+  <!-- Hosting -->
+  <section class="section" id="hosting">
+    <span>Hosting Game & Tools</span>
+    <h1>Hosting Cepat & Stabil untuk Semua Kebutuhan</h1>
+    <p>Pakai server AMD Ryzen EPYC berkualitas, dengan panel ringan, auto backup, dan DDoS protection.</p>
+
+    <div class="feature-grid">
+      <div class="feature-box">
+        <h4>🌐 1 GB RAM</h4>
+        <p>Harga: 10K <br> Slot: 10 Slot</p>
+      </div>
+      <div class="feature-box">
+        <h4>🌐 2 GB RAM</h4>
+        <p>Harga: 20K <br> Slot: 25 Slot</p>
+      </div>
+      <div class="feature-box">
+        <h4>🌐 4 GB RAM</h4>
+        <p>Harga: 50K <br> Slot: 55 Slot</p>
+      </div>
+      <div class="feature-box">
+        <h4>🌐 6 GB RAM</h4>
+        <p>Harga: 75K <br> Slot: 75 Slot</p>
+      </div>
+      <div class="feature-box">
+        <h4>🚀 Spesifikasi Server</h4>
+        <p>Prosesor: AMD Ryzen EPYC <br> SSD NVMe, Low Ping, dan Uptime 99.9%</p>
+      </div>
+    </div>
+
+    <a href="https://wa.me/62xxxxxxxxx" class="btn-primary">Order Hosting Sekarang</a>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    © 2025 MarshDev. Build with ❤️ untuk komunitas server lokal.
+  </footer>
+
 </body>
 </html>
