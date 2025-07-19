@@ -1,4 +1,6 @@
-/* ===== Reset & Base ===== */
+/* index.css FINAL mirip 100% dengan layout preview */
+
+/* ===== Global Style ===== */
 * {
   margin: 0;
   padding: 0;
@@ -7,9 +9,12 @@
 }
 
 body {
-  background: #0d111d;
-  color: #ffffff;
+  background: radial-gradient(circle at 30% 20%, rgba(255, 0, 128, 0.1), transparent 40%),
+              radial-gradient(circle at 70% 80%, rgba(0, 128, 255, 0.1), transparent 40%),
+              #0d111d;
+  color: #fff;
   line-height: 1.6;
+  overflow-x: hidden;
 }
 
 img {
@@ -18,101 +23,110 @@ img {
 }
 
 /* ===== Navbar ===== */
-header {
+nav {
+  width: 100%;
   background-color: #0d111d;
   padding: 1rem 2rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  position: sticky;
+  position: fixed;
   top: 0;
-  z-index: 999;
+  left: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
 }
 
-.navbar-logo {
+nav h1 {
   color: #a88add;
-  font-weight: 700;
-  font-size: 1.4rem;
+  font-size: 1.6rem;
 }
 
 nav ul {
+  list-style: none;
   display: flex;
   gap: 1.5rem;
-  list-style: none;
 }
 
 nav a {
   color: white;
   text-decoration: none;
-  font-weight: 500;
-  transition: 0.3s;
+  font-size: 1rem;
+  transition: color 0.3s;
 }
 
 nav a:hover {
-  color: #a88add;
+  color: #f92672;
 }
 
 /* ===== Hero Section ===== */
 .hero {
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
+  padding-top: 8rem;
   text-align: center;
-  padding: 5rem 2rem;
-  background: radial-gradient(#1e2332, #0d111d);
+  background: transparent;
 }
 
 .hero h1 {
-  font-size: 2.8rem;
-  margin-bottom: 1rem;
+  font-size: 3rem;
+  font-weight: 800;
 }
 
 .hero h1 span {
-  color: #ff2e74;
+  color: #f92672;
 }
 
 .hero p {
-  color: #ccc;
-  max-width: 600px;
-  margin-bottom: 2rem;
+  color: #ddd;
+  font-size: 1.1rem;
+  margin-top: 1rem;
+  max-width: 500px;
 }
 
 .hero .btn {
-  background-color: #ff2e74;
-  color: white;
-  padding: 0.7rem 1.5rem;
+  background-color: #f92672;
+  color: #fff;
+  padding: 0.75rem 1.5rem;
   border: none;
-  border-radius: 6px;
+  border-radius: 10px;
+  margin-top: 2rem;
+  font-weight: bold;
   cursor: pointer;
-  font-weight: 600;
-  transition: 0.3s;
+  transition: background 0.3s;
 }
 
 .hero .btn:hover {
-  background-color: #e02567;
+  background-color: #c41557;
 }
 
-.hero-img {
+.hero .avatar {
+  width: 180px;
+  height: 180px;
   margin-top: 3rem;
-  width: 300px;
-  height: auto;
+  background-color: #222;
   border-radius: 50%;
-  background: #a88add;
-  padding: 2rem;
-  overflow: hidden;
+  background-image: url('https://i.ibb.co/3mzDLvN/avatardev.png');
+  background-size: cover;
+  background-position: center;
+  box-shadow: 0 0 30px #a88add;
 }
 
 /* ===== About Section ===== */
 .about {
   padding: 4rem 2rem;
-  max-width: 800px;
-  margin: auto;
   text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
 }
 
 .about h2 {
   font-size: 2rem;
   margin-bottom: 1rem;
+  color: #f0f4ff;
 }
 
 .about p {
@@ -121,55 +135,67 @@ nav a:hover {
 
 /* ===== Skill Section ===== */
 .skills {
+  background-color: #0d111d;
   padding: 4rem 2rem;
-  background-color: #0b0f1a;
   text-align: center;
 }
 
 .skills h2 {
   font-size: 2rem;
+  color: #fff;
   margin-bottom: 2rem;
 }
 
 .skill-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-  gap: 2rem;
-  max-width: 1000px;
-  margin: auto;
-}
-
-.skill-card {
-  background-color: #161b29;
-  padding: 1.5rem;
-  border-radius: 12px;
-  display: flex;
-  flex-direction: column;
+  grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+  gap: 1.5rem;
+  justify-items: center;
   align-items: center;
-  transition: 0.3s;
+  max-width: 700px;
+  margin: 0 auto;
 }
 
-.skill-card:hover {
-  background-color: #1e2332;
+.skill-grid .skill {
+  background-color: #1b1e2a;
+  padding: 1rem;
+  border-radius: 1rem;
+  transition: transform 0.3s;
+  box-shadow: 0 0 10px rgba(168, 138, 221, 0.2);
 }
 
-.skill-card img {
-  width: 50px;
-  height: 50px;
-  margin-bottom: 1rem;
+.skill-grid .skill:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 0 15px rgba(249, 38, 114, 0.3);
 }
 
-.skill-card span {
-  font-weight: 500;
-  font-size: 1rem;
+.skill-grid img {
+  width: 40px;
+  height: 40px;
+}
+
+.skill-grid p {
   color: #eee;
+  margin-top: 0.5rem;
+  font-size: 0.8rem;
 }
 
-/* ===== Footer ===== */
+/* ===== Responsive ===== */
+@media (max-width: 600px) {
+  .hero h1 {
+    font-size: 2rem;
+  }
+  .skills h2,
+  .about h2 {
+    font-size: 1.5rem;
+  }
+}
+
+/* ===== Footer (optional) ===== */
 footer {
   padding: 2rem;
   text-align: center;
-  color: #aaa;
-  background-color: #0d111d;
-  font-size: 0.9rem;
-} 
+  background: #0d111d;
+  color: #777;
+  font-size: 0.8rem;
+}
