@@ -5,13 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>MarshDev - Forum & Skill</title>
   <link rel="stylesheet" href="index.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
 <!-- Navbar -->
 <header class="navbar">
   <div class="nav-container">
-    <div class="nav-logo">MarshDev</div>
+    <div class="nav-logo">Marsh<span>Dev</span></div>
     <div class="nav-toggle" onclick="document.querySelector('.nav-links').classList.toggle('show')">☰</div>
     <nav class="nav-links">
       <a href="index.html">Home</a>
@@ -22,63 +23,69 @@
 </header>
 
 <!-- Hero -->
-<section class="intro">
-  <h2 class="fade-zoom-text">Selamat Datang di MarshDev!</h2>
-  <p class="subtext">
-    Tempatnya para developer, scripter, dan pejuang server berkumpul! Di sini kamu bisa lihat skill, jasa, dan preview karya developer lokal. Santai tapi produktif.
-  </p>
-</section>
-
-<section class="skills" id="skills">
-  <h2>My Skill</h2>
-  <div class="skill-grid">
-    <div class="skill-item">
-      <div class="skill-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML" /></div>
-      <div class="skill-name">HTML</div>
-    </div>
-    <div class="skill-item">
-      <div class="skill-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS" /></div>
-      <div class="skill-name">CSS</div>
-    </div>
-    <div class="skill-item">
-      <div class="skill-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript" /></div>
-      <div class="skill-name">JavaScript</div>
-    </div>
-    <div class="skill-item">
-      <div class="skill-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" alt="PHP" /></div>
-      <div class="skill-name">PHP</div>
-    </div>
-    <div class="skill-item">
-      <div class="skill-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/wordpress/wordpress-plain.svg" alt="WordPress" /></div>
-      <div class="skill-name">WordPress</div>
-    </div>
-    <div class="skill-item">
-      <div class="skill-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" /></div>
-      <div class="skill-name">Python</div>
-    </div>
-    <div class="skill-item">
-      <div class="skill-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angularjs/angularjs-original.svg" alt="Angular" /></div>
-      <div class="skill-name">Angular</div>
-    </div>
-    <div class="skill-item">
-      <div class="skill-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React" /></div>
-      <div class="skill-name">React</div>
-    </div>
+<section class="hero">
+  <div class="container">
+    <h2 class="hero-title">Selamat Datang di <span class="highlight">MarshDev!</span></h2>
+    <p class="hero-subtext">
+      Tempatnya para <strong>developer, scripter</strong>, dan <strong>pejuang server</strong> berkumpul!  
+      Di sini kamu bisa lihat skill, jasa, dan preview karya developer lokal.  
+      <em>Santai tapi produktif.</em>
+    </p>
   </div>
 </section>
+
+<!-- Skill Section -->
+<section class="skills" id="skills">
+  <div class="container">
+    <h2 class="section-title">My Skill</h2>
+    <div class="skill-grid">
+      <div class="skill-item">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML" />
+        <p>HTML</p>
+      </div>
+      <div class="skill-item">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS" />
+        <p>CSS</p>
+      </div>
+      <div class="skill-item">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript" />
+        <p>JavaScript</p>
+      </div>
+      <div class="skill-item">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" alt="PHP" />
+        <p>PHP</p>
+      </div>
+      <div class="skill-item">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/wordpress/wordpress-plain.svg" alt="WordPress" />
+        <p>WordPress</p>
+      </div>
+      <div class="skill-item">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" />
+        <p>Python</p>
+      </div>
+      <div class="skill-item">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angularjs/angularjs-original.svg" alt="Angular" />
+        <p>Angular</p>
+      </div>
+      <div class="skill-item">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React" />
+        <p>React</p>
+      </div>
     </div>
   </div>
 </section>
 
 <!-- CTA -->
 <section class="cta">
-  <h3>Punya project? Butuh developer?Cari hosting juga?</h3>
-  <a href="dashboard.html" class="btn">Cek Jasa Developer & Paket Hosting Sekarang 🚀</a>
+  <div class="container">
+    <h3>Punya project? Butuh developer? Cari hosting juga?</h3>
+    <a href="dashboard.html" class="btn">Cek Jasa Developer & Paket Hosting Sekarang 🚀</a>
+  </div>
 </section>
 
 <!-- Footer -->
 <footer>
-  © 2025 MarshDev. Build with ❤️ in Indonesia.
+  <p>© 2025 MarshDev. Build with ❤️ in Indonesia.</p>
 </footer>
 
 </body>
