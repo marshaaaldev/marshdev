@@ -1,69 +1,35 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>MarshDev</title>
-    <link rel="stylesheet" href="index.css" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"
-    />
-  </head>
-  <body>
-    <!-- Navbar -->
-    <header>
-      <div class="container">
-        <h1 class="logo">MarshDev</h1>
-        <nav>
-          <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
-        </nav>
-      </div>
-    </header>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>MarshDev - Forum & Skill</title>
+  <link rel="stylesheet" href="index.css" />
+</head>
+<body>
 
-    <!-- Hero Section -->
-    <section class="hero">
-      <div class="container">
-        <h2>I build things<br /><span>for the web.</span></h2>
-        <p>Developer, designer, dan pembangunan sistem SA-MP & web.</p>
-        <a href="#projects" class="btn">Lihat Projek</a>
-      </div>
-    </section>
+<!-- Navbar -->
+<header class="navbar">
+  <div class="nav-container">
+    <div class="nav-logo">MarshDev</div>
+    <div class="nav-toggle" onclick="document.querySelector('.nav-links').classList.toggle('show')">☰</div>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="dashboard.html">Dashboard</a>
+      <a href="testimoni.html">Testimoni</a>
+    </nav>
+  </div>
+</header>
 
-    <!-- About Section -->
-    <section class="about" id="about">
-      <div class="container about-grid">
-        <div class="about-icons">
-          <i class="devicon-html5-plain colored"></i>
-          <i class="devicon-css3-plain colored"></i>
-          <i class="devicon-javascript-plain colored"></i>
-          <i class="devicon-wordpress-plain colored"></i>
-          <i class="devicon-java-plain colored"></i>
-          <i class="devicon-python-plain colored"></i>
-        </div>
-        <div class="about-text">
-          <h3>A Little Bio About Me</h3>
-          <p>
-            Nama gue Andra, seorang developer yang suka eksplorasi web design
-            dan sistem scripting game (SA-MP). Gue nggak sekadar bikin web,
-            tapi bantu wujudin ide lo jadi kenyataan digital.
-          </p>
-          <a href="#" class="btn">Download Resume</a>
-        </div>
-      </div>
-    </section>
+<!-- Hero -->
+<section class="intro">
+  <h2 class="fade-zoom-text">Selamat Datang di MarshDev!</h2>
+  <p class="subtext">
+    Tempatnya para developer, scripter, dan pejuang server berkumpul! Di sini kamu bisa lihat skill, jasa, dan preview karya developer lokal. Santai tapi produktif.
+  </p>
+</section>
 
-   <section class="skills" id="skills">
+<section class="skills" id="skills">
   <h2>My Skill</h2>
   <div class="skill-grid">
     <div class="skill-item">
@@ -99,14 +65,21 @@
       <div class="skill-name">React</div>
     </div>
   </div>
-</section> 
-        </div>
-      </div>
-    </section>
+</section>
+    </div>
+  </div>
+</section>
 
-    <!-- Footer (optional) -->
-    <footer>
-      <p>© 2025 MarshDev. All rights reserved.</p>
-    </footer>
-  </body>
+<!-- CTA -->
+<section class="cta">
+  <h3>Punya project? Butuh developer?Cari hosting juga?</h3>
+  <a href="dashboard.html" class="btn">Cek Jasa Developer & Paket Hosting Sekarang 🚀</a>
+</section>
+
+<!-- Footer -->
+<footer>
+  © 2025 MarshDev. Build with ❤️ in Indonesia.
+</footer>
+
+</body>
 </html>
