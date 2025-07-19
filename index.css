@@ -1,158 +1,175 @@
-/* index.css */
-
-body {
+/* ===== Reset & Base ===== */
+* {
   margin: 0;
   padding: 0;
-  font-family: "Inter", sans-serif;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: #0d111d;
+  color: #ffffff;
+  line-height: 1.6;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* ===== Navbar ===== */
+header {
   background-color: #0d111d;
-  color: #f0f4ff;
-}
-
-a {
-  text-decoration: none;
-  color: #a88add;
-}
-
-.navbar {
+  padding: 1rem 2rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: #151a28;
-  padding: 20px 40px;
   position: sticky;
   top: 0;
-  z-index: 100;
+  z-index: 999;
 }
 
-.navbar .logo {
-  font-weight: 800;
-  font-size: 20px;
-  color: #fff;
+.navbar-logo {
+  color: #a88add;
+  font-weight: 700;
+  font-size: 1.4rem;
 }
 
-.navbar ul {
-  list-style: none;
+nav ul {
   display: flex;
-  gap: 20px;
+  gap: 1.5rem;
+  list-style: none;
 }
 
-.navbar ul li a {
-  color: #f0f4ff;
+nav a {
+  color: white;
+  text-decoration: none;
   font-weight: 500;
   transition: 0.3s;
 }
 
-.navbar ul li a:hover {
+nav a:hover {
   color: #a88add;
 }
 
+/* ===== Hero Section ===== */
 .hero {
-  padding: 100px 40px;
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: space-between;
-  background: radial-gradient(#1c2030, #0d111d);
-  flex-wrap: wrap;
+  text-align: center;
+  padding: 5rem 2rem;
+  background: radial-gradient(#1e2332, #0d111d);
 }
 
-.hero-text h1 {
-  font-size: 48px;
-  font-weight: 800;
-  line-height: 1.2;
-  color: #ffffff;
+.hero h1 {
+  font-size: 2.8rem;
+  margin-bottom: 1rem;
 }
 
-.hero-text h1 span {
-  color: #a88add;
+.hero h1 span {
+  color: #ff2e74;
 }
 
-.hero-text p {
-  margin-top: 10px;
-  font-size: 16px;
-  color: #cbd2e1;
+.hero p {
+  color: #ccc;
+  max-width: 600px;
+  margin-bottom: 2rem;
 }
 
-.btn {
-  display: inline-block;
-  margin-top: 20px;
-  background: #a88add;
-  color: #fff;
-  padding: 10px 25px;
-  border-radius: 8px;
-  font-weight: bold;
+.hero .btn {
+  background-color: #ff2e74;
+  color: white;
+  padding: 0.7rem 1.5rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
   transition: 0.3s;
 }
 
-.btn:hover {
-  background: #7e6bc4;
+.hero .btn:hover {
+  background-color: #e02567;
 }
 
-.hero-img img {
-  max-width: 300px;
-  margin-top: 20px;
+.hero-img {
+  margin-top: 3rem;
+  width: 300px;
+  height: auto;
+  border-radius: 50%;
+  background: #a88add;
+  padding: 2rem;
+  overflow: hidden;
 }
 
+/* ===== About Section ===== */
 .about {
-  padding: 80px 40px;
-  background: #10141f;
+  padding: 4rem 2rem;
+  max-width: 800px;
+  margin: auto;
   text-align: center;
 }
 
 .about h2 {
-  font-size: 32px;
-  color: #a88add;
+  font-size: 2rem;
+  margin-bottom: 1rem;
 }
 
 .about p {
-  margin-top: 20px;
-  max-width: 600px;
-  margin-left: auto;
-  margin-right: auto;
-  line-height: 1.6;
-  color: #cbd2e1;
+  color: #ccc;
 }
 
+/* ===== Skill Section ===== */
 .skills {
-  padding: 80px 40px;
-  background: #0d111d;
+  padding: 4rem 2rem;
+  background-color: #0b0f1a;
   text-align: center;
 }
 
 .skills h2 {
-  font-size: 32px;
-  margin-bottom: 40px;
-  color: #a88add;
+  font-size: 2rem;
+  margin-bottom: 2rem;
 }
 
-.skill-icons {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 40px;
+.skill-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 2rem;
+  max-width: 1000px;
+  margin: auto;
 }
 
 .skill-card {
+  background-color: #161b29;
+  padding: 1.5rem;
+  border-radius: 12px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 10px;
-  width: 100px;
-  transition: transform 0.3s;
-}
-
-.skill-card img {
-  width: 60px;
-  height: 60px;
-  object-fit: contain;
-  filter: drop-shadow(0 0 5px #a88add88);
-}
-
-.skill-card span {
-  font-size: 14px;
-  font-weight: 600;
-  color: #fff;
+  transition: 0.3s;
 }
 
 .skill-card:hover {
-  transform: scale(1.1);
+  background-color: #1e2332;
+}
+
+.skill-card img {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 1rem;
+}
+
+.skill-card span {
+  font-weight: 500;
+  font-size: 1rem;
+  color: #eee;
+}
+
+/* ===== Footer ===== */
+footer {
+  padding: 2rem;
+  text-align: center;
+  color: #aaa;
+  background-color: #0d111d;
+  font-size: 0.9rem;
 }
