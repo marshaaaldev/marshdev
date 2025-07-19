@@ -3,17 +3,16 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>MarshDev - Forum & Skill</title>
-  <link rel="stylesheet" href="index.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <title>MarshDev</title>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-<!-- Navbar -->
+<!-- NAVBAR -->
 <header class="navbar">
   <div class="nav-container">
-    <div class="nav-logo">Marsh<span>Dev</span></div>
-    <div class="nav-toggle" onclick="document.querySelector('.nav-links').classList.toggle('show')">☰</div>
+    <div class="nav-logo">MarshDev</div>
     <nav class="nav-links">
       <a href="index.html">Home</a>
       <a href="dashboard.html">Dashboard</a>
@@ -22,70 +21,42 @@
   </div>
 </header>
 
-<!-- Hero -->
+<!-- HERO -->
 <section class="hero">
-  <div class="container">
-    <h2 class="hero-title">Selamat Datang di <span class="highlight">MarshDev!</span></h2>
-    <p class="hero-subtext">
-      Tempatnya para <strong>developer, scripter</strong>, dan <strong>pejuang server</strong> berkumpul!  
+  <div class="hero-content">
+    <h1>Selamat Datang di <span>MarshDev</span></h1>
+    <p>Tempatnya para developer, scripter, dan pejuang server berkumpul!  
       Di sini kamu bisa lihat skill, jasa, dan preview karya developer lokal.  
-      <em>Santai tapi produktif.</em>
-    </p>
+      Santai tapi produktif.</p>
+    <a href="#skills" class="btn">Lihat Skill</a>
   </div>
 </section>
 
-<!-- Skill Section -->
+<!-- MY SKILL -->
 <section class="skills" id="skills">
-  <div class="container">
-    <h2 class="section-title">My Skill</h2>
-    <div class="skill-grid">
-      <div class="skill-item">
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML" />
-        <p>HTML</p>
-      </div>
-      <div class="skill-item">
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS" />
-        <p>CSS</p>
-      </div>
-      <div class="skill-item">
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript" />
-        <p>JavaScript</p>
-      </div>
-      <div class="skill-item">
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" alt="PHP" />
-        <p>PHP</p>
-      </div>
-      <div class="skill-item">
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/wordpress/wordpress-plain.svg" alt="WordPress" />
-        <p>WordPress</p>
-      </div>
-      <div class="skill-item">
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" />
-        <p>Python</p>
-      </div>
-      <div class="skill-item">
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angularjs/angularjs-original.svg" alt="Angular" />
-        <p>Angular</p>
-      </div>
-      <div class="skill-item">
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React" />
-        <p>React</p>
-      </div>
-    </div>
+  <h2>My Skill</h2>
+  <div class="skill-grid">
+    <div class="skill-item"><div class="skill-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" /></div><p>HTML</p></div>
+    <div class="skill-item"><div class="skill-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" /></div><p>CSS</p></div>
+    <div class="skill-item"><div class="skill-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" /></div><p>JavaScript</p></div>
+    <div class="skill-item"><div class="skill-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" /></div><p>PHP</p></div>
+    <div class="skill-item"><div class="skill-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/wordpress/wordpress-plain.svg" /></div><p>WordPress</p></div>
+    <div class="skill-item"><div class="skill-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" /></div><p>Python</p></div>
+    <div class="skill-item"><div class="skill-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angularjs/angularjs-original.svg" /></div><p>Angular</p></div>
+    <div class="skill-item"><div class="skill-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" /></div><p>React</p></div>
   </div>
 </section>
 
 <!-- CTA -->
 <section class="cta">
-  <div class="container">
-    <h3>Punya project? Butuh developer? Cari hosting juga?</h3>
-    <a href="dashboard.html" class="btn">Cek Jasa Developer & Paket Hosting Sekarang 🚀</a>
-  </div>
+  <h3>Butuh Developer atau Hosting SA-MP?</h3>
+  <p>Layanan cepat, aman, dan terpercaya. Hosting & jasa coding langsung dari tangan profesional.</p>
+  <a href="dashboard.html" class="btn">Cek Layanannya Sekarang 🚀</a>
 </section>
 
-<!-- Footer -->
+<!-- FOOTER -->
 <footer>
-  <p>© 2025 MarshDev. Build with ❤️ in Indonesia.</p>
+  <p>© 2025 MarshDev. Build with ❤️ from Indonesia.</p>
 </footer>
 
 </body>
