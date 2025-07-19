@@ -1,78 +1,65 @@
-/* index.css FINAL mirip 100% dengan layout preview */
-
-/* ===== Global Style ===== */
+/* === RESET DAN DASAR === */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
+  scroll-behavior: smooth;
 }
 
 body {
-  background: radial-gradient(circle at 30% 20%, rgba(255, 0, 128, 0.1), transparent 40%),
-              radial-gradient(circle at 70% 80%, rgba(0, 128, 255, 0.1), transparent 40%),
-              #0d111d;
+  background: #0d111d;
   color: #fff;
-  line-height: 1.6;
-  overflow-x: hidden;
 }
 
 img {
   max-width: 100%;
+  height: auto;
   display: block;
 }
 
-/* ===== Navbar ===== */
-nav {
+/* === NAVBAR === */
+header {
+  position: fixed;
   width: 100%;
-  background-color: #0d111d;
-  padding: 1rem 2rem;
+  top: 0;
+  z-index: 999;
+  background: #0d111d;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 1000;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+  padding: 20px 10%;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
 }
 
-nav h1 {
+.logo {
+  font-size: 24px;
+  font-weight: bold;
   color: #a88add;
-  font-size: 1.6rem;
-}
-
-nav ul {
-  list-style: none;
-  display: flex;
-  gap: 1.5rem;
 }
 
 nav a {
-  color: white;
+  margin-left: 30px;
+  color: #fff;
   text-decoration: none;
-  font-size: 1rem;
-  transition: color 0.3s;
+  font-size: 16px;
+  transition: 0.3s;
 }
 
 nav a:hover {
   color: #f92672;
 }
 
-/* ===== Hero Section ===== */
+/* === HERO SECTION === */
 .hero {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding-top: 8rem;
+  padding-top: 140px;
   text-align: center;
-  background: transparent;
+  background: radial-gradient(circle at top left, #1c1c2e, #0d111d);
+  padding-bottom: 100px;
 }
 
 .hero h1 {
-  font-size: 3rem;
+  font-size: 48px;
   font-weight: 800;
 }
 
@@ -81,121 +68,108 @@ nav a:hover {
 }
 
 .hero p {
-  color: #ddd;
-  font-size: 1.1rem;
-  margin-top: 1rem;
-  max-width: 500px;
+  margin-top: 10px;
+  font-size: 18px;
+  opacity: 0.8;
 }
 
-.hero .btn {
-  background-color: #f92672;
+.btn-primary {
+  margin-top: 30px;
+  display: inline-block;
+  background: #f92672;
   color: #fff;
-  padding: 0.75rem 1.5rem;
-  border: none;
-  border-radius: 10px;
-  margin-top: 2rem;
-  font-weight: bold;
-  cursor: pointer;
-  transition: background 0.3s;
+  padding: 12px 30px;
+  border-radius: 8px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: 0.3s;
 }
 
-.hero .btn:hover {
-  background-color: #c41557;
+.btn-primary:hover {
+  background: #c41e5e;
 }
 
 .hero .avatar {
   width: 180px;
-  height: 180px;
-  margin-top: 3rem;
-  background-color: #222;
+  margin: 40px auto 0;
   border-radius: 50%;
-  background-image: url('https://i.ibb.co/3mzDLvN/avatardev.png');
-  background-size: cover;
-  background-position: center;
-  box-shadow: 0 0 30px #a88add;
+  box-shadow: 0 0 20px #a88add;
 }
 
-/* ===== About Section ===== */
+/* === ABOUT === */
 .about {
-  padding: 4rem 2rem;
+  padding: 100px 10%;
   text-align: center;
-  max-width: 800px;
-  margin: 0 auto;
+  background: #0f1424;
 }
 
 .about h2 {
-  font-size: 2rem;
-  margin-bottom: 1rem;
-  color: #f0f4ff;
+  font-size: 32px;
+  color: #fefefe;
+  margin-bottom: 20px;
 }
 
 .about p {
+  font-size: 16px;
+  line-height: 1.8;
   color: #ccc;
+  max-width: 700px;
+  margin: auto;
 }
 
-/* ===== Skill Section ===== */
+/* === SKILLS === */
 .skills {
-  background-color: #0d111d;
-  padding: 4rem 2rem;
+  background: #0d111d;
+  padding: 80px 10%;
   text-align: center;
 }
 
 .skills h2 {
-  font-size: 2rem;
-  color: #fff;
-  margin-bottom: 2rem;
+  font-size: 32px;
+  color: #fefefe;
+  margin-bottom: 40px;
 }
 
 .skill-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
-  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 30px;
   justify-items: center;
-  align-items: center;
-  max-width: 700px;
-  margin: 0 auto;
 }
 
-.skill-grid .skill {
-  background-color: #1b1e2a;
-  padding: 1rem;
-  border-radius: 1rem;
-  transition: transform 0.3s;
-  box-shadow: 0 0 10px rgba(168, 138, 221, 0.2);
+.skill-card {
+  background: #1b1e2b;
+  padding: 20px;
+  border-radius: 12px;
+  transition: 0.3s;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
 }
 
-.skill-grid .skill:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 0 15px rgba(249, 38, 114, 0.3);
+.skill-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.4);
 }
 
-.skill-grid img {
-  width: 40px;
-  height: 40px;
+.skill-card img {
+  width: 48px;
+  margin-bottom: 10px;
 }
 
-.skill-grid p {
-  color: #eee;
-  margin-top: 0.5rem;
-  font-size: 0.8rem;
+.skill-card p {
+  margin-top: 5px;
+  font-size: 14px;
+  color: #ccc;
 }
 
-/* ===== Responsive ===== */
-@media (max-width: 600px) {
+/* === RESPONSIVE === */
+@media (max-width: 768px) {
   .hero h1 {
-    font-size: 2rem;
+    font-size: 36px;
   }
-  .skills h2,
-  .about h2 {
-    font-size: 1.5rem;
+  header {
+    padding: 20px 5%;
   }
-}
-
-/* ===== Footer (optional) ===== */
-footer {
-  padding: 2rem;
-  text-align: center;
-  background: #0d111d;
-  color: #777;
-  font-size: 0.8rem;
+  nav a {
+    margin-left: 15px;
+  }
 }
