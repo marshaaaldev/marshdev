@@ -2,159 +2,172 @@
 <html lang="id">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Testimoni Client | MarshalDev</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Testimoni | MarshalDev</title>
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css"/>
   <style>
     body {
+      background-color: #0d111d;
+      font-family: 'Outfit', sans-serif;
       margin: 0;
-      font-family: 'Poppins', sans-serif;
-      background-color: #000;
-      color: #ffffff;
+      padding: 0;
+      color: #fff;
     }
 
-    header {
-      background-color: #000;
-      padding: 1rem 2rem;
+    nav {
       display: flex;
       justify-content: space-between;
-      align-items: center;
-      border-bottom: 1px solid #1c1c1c;
-    }
-
-    header a {
-      color: #3ee8ff;
-      text-decoration: none;
-      font-weight: 600;
-    }
-
-    .hero {
-      background-color: #000;
-      padding: 3rem 2rem;
-      text-align: center;
-      border-bottom: 2px solid #1a1a1a;
-    }
-
-    .hero h1 {
-      font-size: 2.6rem;
-      font-weight: 700;
-      background: linear-gradient(90deg, #00f0ff, #24caff);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      margin-bottom: 1rem;
-    }
-
-    .hero p {
-      font-size: 1.1rem;
-      color: #ccc;
-      margin: 0 auto;
-      max-width: 600px;
-    }
-
-    .highlight-box {
-      margin-top: 1.5rem;
-      background-color: #0d1117;
-      display: inline-block;
       padding: 1rem 2rem;
-      border-radius: 10px;
-      border: 1px solid #24caff;
-    }
-
-    .highlight-box span {
-      display: block;
-      margin: 0.3rem 0;
-      font-weight: 600;
-      color: #f7d774;
-    }
-
-    .testimoni-section {
-      padding: 2rem;
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-      gap: 1.5rem;
-    }
-
-    .testimoni-card {
-      background-color: #0d1117;
-      padding: 1.2rem;
-      border-radius: 10px;
-      border: 1px solid #2e2e2e;
-      transition: 0.3s ease;
-      position: relative;
-    }
-
-    .testimoni-card:hover {
-      transform: translateY(-5px);
-      border-color: #24caff;
-    }
-
-    .client-name {
-      font-weight: 600;
-      margin-bottom: 0.5rem;
-      color: #3ee8ff;
-    }
-
-    .client-quote {
-      font-style: italic;
-      font-size: 0.95rem;
-      color: #ddd;
-    }
-
-    .badge {
-      position: absolute;
-      top: 10px;
-      right: 10px;
-      background-color: #3ee8ff;
-      color: #000;
-      font-size: 0.75rem;
-      padding: 0.3rem 0.6rem;
-      border-radius: 20px;
+      background-color: #0d111d;
       font-weight: bold;
     }
 
-    footer {
+    .title {
       text-align: center;
+      margin-top: 2rem;
+    }
+
+    .title h1 {
+      font-size: 2rem;
+      color: #0df6ff;
+    }
+
+    .badges {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1rem;
+      margin: 2rem auto;
+    }
+
+    .badge {
+      background-color: #111;
+      border-radius: 1.5rem;
+      padding: 0.5rem 1.2rem;
+      color: #0df6ff;
+      box-shadow: 0 0 10px #0df6ff55;
+      font-weight: 600;
+    }
+
+    .testimoni-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
       padding: 1rem;
-      color: #777;
-      background-color: #000;
-      border-top: 1px solid #1a1a1a;
+      max-width: 600px;
+      margin: auto;
+    }
+
+    .testimoni {
+      background-color: #1a1d2a;
+      padding: 1rem;
+      border-radius: 1rem;
+      width: 100%;
+      display: flex;
+      gap: 1rem;
+      align-items: center;
+      box-shadow: 0 0 10px rgba(0,0,0,0.4);
+    }
+
+    .testimoni img {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+
+    .testimoni .konten {
+      flex: 1;
+    }
+
+    .testimoni .konten h4 {
+      margin: 0;
+      color: #00d8ff;
+    }
+
+    .testimoni .konten p {
+      margin: 0.3rem 0 0 0;
+      color: #ddd;
     }
   </style>
 </head>
 <body>
+  <nav>
+    <div style="color:#0df6ff;">MarshalDev</div>
+    <a href="index.html" style="color:#fff;">Kembali ke Beranda</a>
+  </nav>
 
-  <header>
-    <a href="index.html">← Kembali ke Beranda</a>
-    <strong style="color:#fff">Testimoni MarshalDev</strong>
-  </header>
+  <div class="title" data-aos="zoom-in">
+    <h1>Client MarshalDev</h1>
+  </div>
 
-  <section class="hero">
-    <h1>Testimoni Client MarshalDev</h1>
-    <p>Kami dipercaya oleh puluhan client untuk project SA-MP, hosting, dan website desain</p>
-    <div class="highlight-box">
-      <span>💎 Developer Terpercaya (98%)</span>
-      <span>🚀 Store Hosting Terbaik (97%)</span>
-      <span>✅ Recommended by Clients (99%)</span>
-    </div>
-  </section>
+  <div class="badges" data-aos="fade-up">
+    <div class="badge">⭐ Rekomendasi Developer</div>
+    <div class="badge">🔐 Amanah & Terpercaya</div>
+    <div class="badge">💬 Fast Response</div>
+    <div class="badge">🎯 Tepat Waktu</div>
+  </div>
 
-  <section class="testimoni-section">
-    <!-- Testimoni -->
-    <div class="testimoni-card"><span class="badge">⭐️ 5.0</span><div class="client-name">Rafli</div><div class="client-quote">Jasa developer paling worth it, gua request fitur langsung satset wkwk keren</div></div>
-    <div class="testimoni-card"><span class="badge">⭐️ 5.0</span><div class="client-name">Kilua</div><div class="client-quote">Gamemode oldschool keren sih karena gua ngikutin luminar dari 0 makanya sange.</div></div>
-    <div class="testimoni-card"><span class="badge">⭐️ 5.0</span><div class="client-name">Ambasing</div><div class="client-quote">Setup cepat dan responsif. Supportnya juga bagus, bintang nya sampe jebol wok</div></div>
-    <div class="testimoni-card"><span class="badge">⭐️ 4.9</span><div class="client-name">FikriSamp</div><div class="client-quote">Gua jasa setup+beli gamemode udah kaya setan tanganya cepet bet tiba tiba kelar</div></div>
-    <div class="testimoni-card"><span class="badge">⭐️ 5.0</span><div class="client-name">Zeevan0k</div><div class="client-quote">Hosting murah tapi kualitas bintang lima, repeat order wajib lah gile</div></div>
-    <div class="testimoni-card"><span class="badge">⭐️ 4.8</span><div class="client-name">Hanzo</div><div class="client-quote">Jasa dev sebulan dan setiap pengerjaan selalu update, top banget mas next lagi</div></div>
-    <div class="testimoni-card"><span class="badge">⭐️ 5.0</span><div class="client-name">Khal</div><div class="client-quote">Pelayanan cepat dan sangat komunikatif. Terbaik sih ini.</div></div>
-    <div class="testimoni-card"><span class="badge">⭐️ 5.0</span><div class="client-name">Imran</div><div class="client-quote">Gamemodenya tinggal pakai dan sudah optimal tanpa kendala bug merosahkan wkwkwk</div></div>
-    <div class="testimoni-card"><span class="badge">⭐️ 4.7</span><div class="client-name">Ilham</div><div class="client-quote">Saya beli hosting ryzen 16gb buset ngebutnya kaya lagi balap dikejar polisi</div></div>
-    <div class="testimoni-card"><span class="badge">⭐️ 5.0</span><div class="client-name">Rendi</div><div class="client-quote">Work it browww gua fix bug sama jasa script td memuaskan</div></div>
-  </section>
+  <div class="testimoni-container" id="testimoni-container">
+    <!-- Testimoni di-generate oleh JS -->
+  </div>
 
-  <footer>
-    &copy; 2025 MarshalDev. All rights reserved.
-  </footer>
+  <script>
+    const data = [
+      "Fast respon dan ngebantu banget. Order forum SA-MP langsung jadi!",
+      "Order jasa developet SA-MP 1 minggu hasilnya mantab mas marshal.",
+      "Fast respon gege parah wok.",
+      "Hosting ngebut parah harga murah banget, sumpah gua migrasi dari mayer kesini.",
+      "Baru minta fix bug langsung dikerjain, keren.",
+      "Gak nyangka hasilnya sebagus ini, mantep mas, next gua mau order forum buat store.",
+      "Jasa fix bug dan masang script td hbe, kerjanya satset",
+      "Sesuai request banget bro, makasih banyak.",
+      "Gua bakal order lagi sih pasti!",
+      "Awalnya ragu karena gua ke skem sama dev gua sebelumnya & ternyata jasa developer di mas marshal ga sia sia",
+      "Bikin web portofolio keren banget bro!",
+      "Hosting SA-MP lancar jaya ngebut kaya dikejar pulici.",
+      "Responsif & ngerti kebutuhan customer.",
+      "Jasa dev per minggu & hasilnya puas semua request di kerjain ",
+      "Order fix td yang gua udah stres parah, langsung beres gua dev disini wkwk.",
+      "Bintang 5 mas, bakal next order .",
+      "Support jam berapa pun, gila ni orang.",
+      "Sistem gamemode luminar bagus & ternyata satu satunya bekas project mas nya.",
+      "Hasil kerja ga pernah PHP wkwk.",
+      "Textdraw animasi bagus & dinamis.",
+      "Gege parah mas fast resp banget.",
+      "Desain UI rapih dan responsif.",
+      "Hosting support 24/7 beneran.",
+      "Ngodingnya niat, hasilnya gak asal, next gua mau nambah fitur bang wkw.",
+      "Order sistem mapping juga bisa!",
+      "Langsung cocok sama style develop nya.",
+      "Ramah, sabar, dan ngoding cepet.",
+      "Harga worth it buat hasil sebagus ini.",
+      "Ga cuma janji doang, beneran hasilin.",
+      "Mau revisi juga dibantu full!"
+    ];
 
+    const names = [
+      "Rafli", "Andika", "Salman", "Farhan", "Ilham", "Dika", "Bayu", "Tegar", "Adit", "Reyhan",
+      "Fajar", "Iqbal", "Yuda", "Bagas", "Naufal", "Vicky", "Ridho", "Gilang", "Arya", "Putra",
+      "Raka", "Dian", "Alvin", "Kevin", "Rizki", "Rendy", "Yoga", "Dhani", "Eka", "Agung"
+    ];
+
+    const container = document.getElementById("testimoni-container");
+    data.forEach((komentar, i) => {
+      const nama = names[i % names.length];
+      container.innerHTML += `
+        <div class="testimoni" data-aos="fade-up" data-aos-delay="${i * 50}">
+          <img src="https://raw.githubusercontent.com/marshaaaldev/marshdev/main/3782eb6c4d4d41b8dc365f1e9a2f9394.jpg" alt="profil" />
+          <div class="konten">
+            <h4>${nama}</h4>
+            <p>${komentar}</p>
+          </div>
+        </div>`;
+    });
+  </script>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>AOS.init();</script>
 </body>
 </html>
